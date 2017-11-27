@@ -10,18 +10,18 @@ const base = 'process.env.API_ROOT'
 export const baseUrl = localStorage.getItem('baseUrl') ? localStorage.getItem('baseUrl') : process.env.API_ROOT;
 
 //knowledge
-export const knowledgeList = base + '/KnowledgeService.svc/GetKnowledgeItems';
+export const knowledgeList = base + '/ExpertKnowledgeService.svc/GetExpertKnowledgeItems';
 
 // export const maintainListpage = base + '/maintain/listpage';
-export const knowledgeListpage = base + '/KnowledgeService.svc/GetKnowledgeItems';
+export const knowledgeListpage = base + '/ExpertKnowledgeService.svc/GetExpertKnowledgeItems';
 
-export const knowledgeRemove = base + '/KnowledgeService.svc/DelKnowledgeItem';
+export const knowledgeRemove = base + '/ExpertKnowledgeService.svc/DelExpertKnowledgeItem';
 
-export const knowledgeBatchremove = base + '/KnowledgeService.svc/DelKnowledgeItem';
+export const knowledgeBatchRemove = base + '/ExpertKnowledgeService.svc/DelExpertKnowledgeItem';
 
-export const knowledgeEdit = base + '/KnowledgeService.svc/UpdKnowledgeItem';
+export const knowledgeEdit = base + '/ExpertKnowledgeService.svc/UpdExpertKnowledgeItem';
 
-export const knowledgeAdd = base + '/KnowledgeService.svc/AddKnowledgeItem';
+export const knowledgeAdd = base + '/ExpertKnowledgeService.svc/AddExpertKnowledgeItem';
 
 
 

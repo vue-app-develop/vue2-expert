@@ -60,9 +60,12 @@
                     </el-table-column>
                     <el-table-column label="操作" width="150">
                         <template slot-scope="scope">
-                            <el-button size="small" @click="handleEdit(scope.$index, scope.row)">编辑</el-button>
-                            <el-button type="danger" size="small" @click="handleDel(scope.$index, scope.row)">删除
+                            <el-button type="info" size="small" @click="handleDetail(scope.$index, scope.row)">
+                            详情
                             </el-button>
+                            <el-button size="small" @click="handleEdit(scope.$index, scope.row)">编辑</el-button>
+                            <!--<el-button type="danger" size="small" @click="handleDel(scope.$index, scope.row)">删除-->
+                            <!--</el-button>-->
                         </template>
                     </el-table-column>
                 </el-table>
@@ -110,6 +113,36 @@
                 <el-button @click.native="editFormVisible = false">取消</el-button>
                 <el-button type="primary" @click.native="editSubmit" :loading="editLoading">提交</el-button>
             </div>
+        </el-dialog>
+
+        <!--详情界面-->
+        <el-dialog title="告警知识详情" v-model="detailFormVisible" :close-on-click-modal="false">
+            <el-form :model="detailForm" label-width="100px">
+                <el-form-item label="名称" style="width: 450px;">
+                    <el-input :disabled="true" v-model="detailForm.knowledgeTitle" placeholder="请输入名称" auto-complete="off"></el-input>
+                </el-form-item>
+                <el-form-item label="问题现象" style="width: 450px;">
+                    <el-input
+                            :disabled="true"
+                            type="textarea"
+                            :rows="2"
+                            placeholder="请输入问题现象"
+                            v-model="detailForm.problem">
+                    </el-input>
+                </el-form-item>
+                <el-form-item label="解决方式" style="width: 450px;">
+                    <el-input
+                            :disabled="true"
+                            type="textarea"
+                            :rows="2"
+                            placeholder="请输入解决方式"
+                            v-model="detailForm.solution">
+                    </el-input>
+                </el-form-item>
+                <el-form-item label="关键词" style="width: 450px;">
+                    <el-input :disabled="true" v-model="detailForm.keyWord" placeholder="请输入关键词" auto-complete="off"></el-input>
+                </el-form-item>
+            </el-form>
         </el-dialog>
 
         <!--新增界面-->
@@ -219,6 +252,18 @@
                     strOrder: undefined
                 },
 
+                detailFormVisible: false,//详情界面是否显示
+                detailForm: {
+                    knowledgeTitle: '',
+                    keyWord: '',
+                    problem: '',
+                    solution: '',
+                    equipmentCategory: '',
+                    baseTypeId: '',
+                    createUser: '',
+                    accessoryKey: ''
+                },
+
                 editFormVisible: false,//编辑界面是否显示
                 editLoading: false,
                 editFormRules: {
@@ -287,9 +332,9 @@
                 let para = {
                     pageNo: _this.listQuery.curPage,
                     pageSize: _this.listQuery.pageSize,
-                    strOrder: 'CreateTime DESC',
-                    equipmentCategory: _this.filters.equipmentCategory,
-                    keyWord: _this.filters.strContent
+//                    strOrder: 'CreateTime DESC',
+//                    equipmentCategory: _this.filters.equipmentCategory,
+                    keyWord: _this.filters.keyWord
                 };
                 _this.listLoading = true;
 
@@ -300,10 +345,12 @@
                     jsonp: 'jsoncallback',
                     data: para,
                     timeout: 5000,
-                    url: base.baseUrl + "/KnowledgeService.svc/getKnowledge",
+                    url: base.baseUrl + "/ExpertKnowledgeService.svc/getExpertKnowledge",
                     success: function (res) {
+                        console.log('res: ' + JSON.stringify(res));
                         let index1 = res.indexOf("]");
                         let knowledge = JSON.parse(res.substr(0, index1 + 1));
+                        console.log('knowledge: ' + JSON.stringify(knowledge));
                         let totalStr = res.substr(index1 + 2, res.length - 1);
                         let index2 = totalStr.indexOf(":");
                         totalStr = totalStr.substr(index2 + 2, totalStr.length - index2 - 3)
@@ -325,20 +372,21 @@
                                     isInvalid: '',
                                     applyCount: ''
                                 };
-                                item.knowledgeId = know.knowledgeId;
-                                item.knowledgeTitle = know.knowledgeTitle;
-                                item.keyWord = know.keyWord;
-                                item.problem = know.problem;
-                                item.solution = know.solution;
-                                item.equipmentCategory = know.equipmentCategory;
-                                item.knowledgeTitle = know.knowledgeTitle;
-                                item.isVerified = know.isVerified;
+                                item.knowledgeId = know.KnowledgeId;
+                                item.knowledgeTitle = know.KnowledgeTitle;
+                                item.keyWord = know.KeyWord;
+                                item.problem = know.Problem;
+                                item.solution = know.Solution;
+                                item.equipmentCategory = know.EquipmentCategory;
+                                item.knowledgeTitle = know.KnowledgeTitle;
+                                item.isVerified = know.IsVerified;
                                 item.VerifyTime = know.VerifyTime;
                                 item.VerifyUser = know.VerifyUser;
-                                item.isInvalid = know.isInvalid;
-                                item.applyCount = know.applyCount;
+                                item.isInvalid = know.IsInvalid;
+                                item.applyCount = know.ApplyCount;
 
                                 _this.knowledge.push(item);
+                                console.log('_this.knowledge: ' + JSON.stringify(_this.knowledge));
                             }
                         }
                     }
@@ -377,7 +425,7 @@
                         type: 'GET',
                         jsonp: 'jsoncallback',
                         data: para,
-                        url: base.baseUrl + "/KnowledgeService.svc/DelKnowledgeItem",
+                        url: base.baseUrl + "/ExpertKnowledgeService.svc/DelExpertKnowledge",
                         success: this.deleteSuccess,
                         dataType: 'jsonp'
                     });
@@ -389,20 +437,6 @@
             handleEdit: function (index, row) {
                 this.editFormVisible = true;
                 this.editForm = Object.assign({}, row);
-            },
-            //显示新增界面
-            handleAdd: function () {
-                this.addFormVisible = true;
-                this.addForm = {
-                    knowledgeTitle: '',
-                    keyWord: '',
-                    problem: '',
-                    solution: '',
-                    equipmentCategory: '',
-                    baseTypeId: '',
-                    createUser: '',
-                    accessoryKey: ''
-                };
             },
             editSuccess: function (res, status) {
                 let data = JSON.parse(res);
@@ -436,13 +470,32 @@
                                 type: 'GET',
                                 jsonp: 'jsoncallback',
                                 data: para,
-                                url: base.baseUrl + "/KnowledgeService.svc/UpdKnowledgeItem",
+                                url: base.baseUrl + "/ExpertKnowledgeService.svc/UpdExpertKnowledge",
                                 success: this.editSuccess,
                                 dataType: 'jsonp'
                             });
                         });
                     }
                 });
+            },
+            //显示详情界面
+            handleDetail: function (index, row) {
+                this.detailFormVisible = true;
+                this.detailForm = Object.assign({}, row);
+            },
+            //显示新增界面
+            handleAdd: function () {
+                this.addFormVisible = true;
+                this.addForm = {
+                    knowledgeTitle: '',
+                    keyWord: '',
+                    problem: '',
+                    solution: '',
+                    equipmentCategory: '',
+                    baseTypeId: '',
+                    createUser: '',
+                    accessoryKey: ''
+                };
             },
             addSuccess: function (res, status) {
                 let data = JSON.parse(res);
@@ -476,7 +529,7 @@
                                 type: 'GET',
                                 jsonp: 'jsoncallback',
                                 data: para,
-                                url: base.baseUrl + "/KnowledgeService.svc/AddKnowledgeItem",
+                                url: base.baseUrl + "/ExpertKnowledgeService.svc/AddExpertKnowledge",
                                 success: this.addSuccess,
                                 dataType: 'jsonp'
                             });
@@ -501,7 +554,7 @@
                         type: 'GET',
                         jsonp: 'jsoncallback',
                         data: para,
-                        url: base.baseUrl + "/KnowledgeService.svc/DelKnowledgeItem",
+                        url: base.baseUrl + "/ExpertKnowledgeService.svc/DelExpertKnowledge",
                         success: this.deleteSuccess,
                         dataType: 'jsonp'
                     });

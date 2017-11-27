@@ -3,7 +3,7 @@ import qs from 'qs'
 import * as url from './urlConfig'
 
 const instance = axios.create({
-    baseURL: 'http://10.169.42.142:8090',
+    baseURL: 'http://10.169.42.84:8080',
     timeout: 20000,
     validateStatus:function(status){
         return status < 500;
@@ -22,7 +22,7 @@ export const getKnowledgeList = params => {
 };
 
 export const getKnowledgeListPage = params => {
-    return instance.get(url.maintainListpage, qs.stringify({params: params}));
+    return instance.get(url.knowledgeListpage, qs.stringify({params: params}));
 };
 
 export const removeKnowledge = params => {
@@ -30,7 +30,7 @@ export const removeKnowledge = params => {
 };
 
 export const batchRemoveKnowledge = params => {
-    return axios.get(url.knowledgeBatchremove, {params: params});
+    return axios.get(url.knowledgeBatchRemove, {params: params});
 };
 
 export const editKnowledge = params => {
