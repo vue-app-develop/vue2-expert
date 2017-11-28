@@ -44,8 +44,8 @@
                 <!--列表-->
                 <el-table :data="knowledge" highlight-current-row v-loading="listLoading"
                           @selection-change="selsChange">
-                    <el-table-column type="selection" width="55">
-                    </el-table-column>
+                    <!--<el-table-column type="selection" width="55">-->
+                    <!--</el-table-column>-->
                     <el-table-column type="index" width="60">
                     </el-table-column>
                     <el-table-column prop="knowledgeTitle" label="知识名称">
@@ -72,8 +72,8 @@
 
                 <!--工具条-->
                 <el-col :span="24" class="toolbar">
-                    <el-button type="danger" @click="batchRemove" :disabled="this.sels.length===0" class="fl">批量删除
-                    </el-button>
+                    <!--<el-button type="danger" @click="batchRemove" :disabled="this.sels.length===0" class="fl">批量删除
+                    </el-button>-->
                     <el-pagination @size-change="handleSizeChange" @current-change="handleCurrentChange"
                                    :current-page.sync="listQuery.curPage" :page-sizes="[10,20,30, 50]"
                                    :page-size="listQuery.pageSize" layout="total, sizes, prev, pager, next, jumper"
@@ -107,11 +107,51 @@
                 </el-form-item>
                 <el-form-item label="关键词" prop="keyWord" style="width: 450px;">
                     <el-input v-model="editForm.keyWord" placeholder="请输入关键词" auto-complete="off"></el-input>
+                    (多个关键字之间用“,”分隔，最多不超过10个)
+                </el-form-item>
+                <el-form-item>
+                    <Upload v-model="editForm.image_uri"></Upload>
                 </el-form-item>
             </el-form>
             <div slot="footer" class="dialog-footer">
                 <el-button @click.native="editFormVisible = false">取消</el-button>
                 <el-button type="primary" @click.native="editSubmit" :loading="editLoading">提交</el-button>
+            </div>
+        </el-dialog>
+
+        <!--新增界面-->
+        <el-dialog title="新增告警知识" v-model="addFormVisible" :close-on-click-modal="false" size="small">
+            <el-form ref="addForm" :model="addForm" label-width="100px" :rules="addFormRules">
+                <el-form-item label="名称" prop="knowledgeTitle" style="width: 450px;">
+                    <el-input v-model="addForm.knowledgeTitle" placeholder="请输入名称" auto-complete="off"></el-input>
+                </el-form-item>
+                <el-form-item label="问题现象" prop="problem" style="width: 450px;">
+                    <el-input
+                            type="textarea"
+                            :rows="2"
+                            placeholder="请输入问题现象"
+                            v-model="addForm.problem">
+                    </el-input>
+                </el-form-item>
+                <el-form-item label="解决方式" prop="solution" style="width: 450px;">
+                    <el-input
+                            type="textarea"
+                            :rows="2"
+                            placeholder="请输入解决方式"
+                            v-model="addForm.solution">
+                    </el-input>
+                </el-form-item>
+                <el-form-item label="关键词" prop="keyWord" style="width: 450px;">
+                    <el-input v-model="addForm.keyWord" placeholder="请输入关键词" auto-complete="off"></el-input>
+                    (多个关键字之间用“,”分隔，最多不超过10个)
+                </el-form-item>
+                <el-form-item>
+                    <Upload v-model="addForm.image_uri"></Upload>
+                </el-form-item>
+            </el-form>
+            <div slot="footer" class="dialog-footer">
+                <el-button @click.native="addFormVisible = false">取消</el-button>
+                <el-button type="primary" @click.native="addSubmit" :loading="addLoading">提交</el-button>
             </div>
         </el-dialog>
 
@@ -144,52 +184,13 @@
                 </el-form-item>
             </el-form>
         </el-dialog>
-
-        <!--新增界面-->
-        <el-dialog title="新增告警知识" v-model="addFormVisible" :close-on-click-modal="false" size="small">
-            <el-form ref="addForm" :model="addForm" label-width="100px" :rules="addFormRules">
-                <el-form-item label="名称" prop="knowledgeTitle" style="width: 450px;">
-                    <el-input v-model="addForm.knowledgeTitle" placeholder="请输入名称" auto-complete="off"></el-input>
-                </el-form-item>
-                <el-form-item label="问题现象" prop="problem" style="width: 450px;">
-                    <el-input
-                            type="textarea"
-                            :rows="2"
-                            placeholder="请输入问题现象"
-                            v-model="addForm.problem">
-                    </el-input>
-                </el-form-item>
-                <el-form-item label="解决方式" prop="solution" style="width: 450px;">
-                    <el-input
-                            type="textarea"
-                            :rows="2"
-                            placeholder="请输入解决方式"
-                            v-model="addForm.solution">
-                    </el-input>
-                </el-form-item>
-                <el-form-item label="关键词" prop="keyWord" style="width: 450px;">
-                    <el-input v-model="addForm.keyWord" placeholder="请输入关键词" auto-complete="off"></el-input>
-                </el-form-item>
-                <el-form-item label="附件" prop="attachment" style="width: 500px;">
-                    <form action="http://www.b.com/io.php" method="POST" enctype="multipart/form-data" target="upload">
-                        <input type="file" name="upload_file"/>
-                        <input type="text" name="tmpurl" value="http://www.a.com/tmp.html" style="display:none"/>
-                        <input type="submit" value="开始上传"/>
-                    </form>
-                    <iframe name="upload" style="display:none"></iframe>
-                </el-form-item>
-            </el-form>
-            <div slot="footer" class="dialog-footer">
-                <el-button @click.native="addFormVisible = false">取消</el-button>
-                <el-button type="primary" @click.native="addSubmit" :loading="addLoading">提交</el-button>
-            </div>
-        </el-dialog>
     </section>
 </template>
 
 <script>
     import util from '../../common/js/util'
     import * as base from '../../api/urlConfig'
+    import Upload from '../../components/Upload/singleImage3'
     //import NProgress from 'nprogress'
     import {
         getKnowledgeListPage,
@@ -200,6 +201,7 @@
     } from '../../api/api';
 
     export default {
+        components: { Upload },
         data() {
             return {
                 myBackToTopStyle: {
@@ -261,7 +263,8 @@
                     equipmentCategory: '',
                     baseTypeId: '',
                     createUser: '',
-                    accessoryKey: ''
+                    accessoryKey: '',
+                    image_uri: ''
                 },
 
                 editFormVisible: false,//编辑界面是否显示
@@ -283,7 +286,8 @@
                     equipmentCategory: '',
                     baseTypeId: '',
                     createUser: '',
-                    accessoryKey: ''
+                    accessoryKey: '',
+                    image_uri: ''
                 },
 
                 addFormVisible: false,//新增界面是否显示
@@ -305,7 +309,8 @@
                     equipmentCategory: '',
                     baseTypeId: '',
                     createUser: '',
-                    accessoryKey: ''
+                    accessoryKey: '',
+                    image_uri:''
                 }
 
             }
