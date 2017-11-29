@@ -2,10 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4b5e382c-d06f-421d-824b-42eadee674ab" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/Upload/singleImage.vue" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/Upload/singleImage2.vue" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/Upload/singleImage3.vue" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/styles/mixin.scss" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/views/nav1/Page1.vue" afterPath="$PROJECT_DIR$/src/views/nav1/Page1.vue" />
     </list>
@@ -21,27 +17,7 @@
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="Page1.vue" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/views/nav1/Page1.vue">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="417">
-              <caret line="145" column="44" lean-forward="false" selection-start-line="145" selection-start-column="44" selection-end-line="145" selection-end-column="44" />
-              <folding>
-                <element signature="e#9644#9683#0" expanded="true" />
-                <element signature="e#9838#10003#0" expanded="true" />
-                <element signature="e#10130#10447#0" expanded="false" />
-                <element signature="e#19062#19178#0" expanded="false" />
-                <element signature="e#19228#19836#0" expanded="false" />
-                <element signature="e#19891#20782#0" expanded="false" />
-                <element signature="e#21031#21434#0" expanded="false" />
-                <element signature="e#21483#22088#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
@@ -56,13 +32,20 @@
       <find>maintain</find>
       <find>handleEdit</find>
       <find>KnowledgeService</find>
-      <find>filters</find>
       <find>getToken</find>
       <find>image_uri</find>
       <find>imageUrl</find>
       <find>value</find>
       <find>leng</find>
       <find>detailForm</find>
+      <find>equipmentCategories</find>
+      <find>EquipmentCategoryId</find>
+      <find>getEquipmentCategories</find>
+      <find>console</find>
+      <find>categorySource</find>
+      <find>getKnowledge</find>
+      <find>filters</find>
+      <find>equipmentCategory</find>
     </findStrings>
     <replaceStrings>
       <replace>告警知识</replace>
@@ -129,6 +112,7 @@
     </navigator>
     <panes>
       <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -141,138 +125,15 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="vue2-expert" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="vue2-expert" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="vue2-expert" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="vue2-expert" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="vue2-expert" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="vue2-expert" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="nav1" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="vue2-expert" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="vue2-expert" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="styles" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="vue2-expert" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="vue2-expert" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="components" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="vue2-expert" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="vue2-expert" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="api" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="vue2-expert" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="vue2-expert" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="config" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="nodejs_interpreter_path" value="/usr/local/bin/node" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="E:/angular4/phoenix-parent/core/src/main/webapp" />
     <property name="HbShouldOpenHtmlAsHb" value="" />
   </component>
   <component name="RecentsManager">
@@ -388,25 +249,25 @@
       <workItem from="1511013940744" duration="6921000" />
       <workItem from="1511060989280" duration="10398000" />
       <workItem from="1511489617332" duration="4554000" />
-      <workItem from="1511871844541" duration="3602000" />
+      <workItem from="1511871844541" duration="3674000" />
+      <workItem from="1511922456659" duration="6510000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="25475000" />
+    <option name="totallyTimeSpent" value="32057000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24947257" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1392405" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21919303" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21919303" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3293348" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3293348" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -426,7 +287,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="2" />
+      <option name="time" value="3" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -436,14 +297,55 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#9644#9683#0" expanded="true" />
-            <element signature="e#9838#10003#0" expanded="true" />
-            <element signature="e#10130#10447#0" expanded="false" />
-            <element signature="e#19062#19178#0" expanded="false" />
-            <element signature="e#19228#19836#0" expanded="false" />
-            <element signature="e#19891#20782#0" expanded="false" />
-            <element signature="e#21031#21434#0" expanded="false" />
-            <element signature="e#21483#22088#0" expanded="false" />
+            <element signature="e#9633#9672#0" expanded="true" />
+            <element signature="e#9827#9992#0" expanded="true" />
+            <element signature="e#10119#10436#0" expanded="false" />
+            <element signature="e#11489#11835#0" expanded="false" />
+            <element signature="e#12320#12697#0" expanded="false" />
+            <element signature="e#13178#13554#0" expanded="false" />
+            <element signature="e#13653#13752#0" expanded="false" />
+            <element signature="e#13810#13908#0" expanded="false" />
+            <element signature="e#13951#14003#0" expanded="false" />
+            <element signature="e#14063#15640#0" expanded="false" />
+            <element signature="e#15692#19127#0" expanded="false" />
+            <element signature="e#19185#19621#0" expanded="false" />
+            <element signature="e#19675#20562#0" expanded="false" />
+            <element signature="e#20630#21235#0" expanded="false" />
+            <element signature="e#21304#21420#0" expanded="false" />
+            <element signature="e#21475#22366#0" expanded="false" />
+            <element signature="e#22435#23043#0" expanded="false" />
+            <element signature="e#23305#23813#0" expanded="false" />
+            <element signature="e#23877#24613#0" expanded="false" />
+            <element signature="e#24780#25589#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/views/nav1/Page1.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#9633#9672#0" expanded="true" />
+            <element signature="e#9827#9992#0" expanded="true" />
+            <element signature="e#10119#10436#0" expanded="false" />
+            <element signature="e#11489#11835#0" expanded="false" />
+            <element signature="e#12320#12697#0" expanded="false" />
+            <element signature="e#13178#13554#0" expanded="false" />
+            <element signature="e#13653#13752#0" expanded="false" />
+            <element signature="e#13810#13908#0" expanded="false" />
+            <element signature="e#13951#14003#0" expanded="false" />
+            <element signature="e#14063#15640#0" expanded="false" />
+            <element signature="e#15692#19127#0" expanded="false" />
+            <element signature="e#19185#19621#0" expanded="false" />
+            <element signature="e#19675#20562#0" expanded="false" />
+            <element signature="e#20630#21235#0" expanded="false" />
+            <element signature="e#21304#21420#0" expanded="false" />
+            <element signature="e#21475#22366#0" expanded="false" />
+            <element signature="e#22435#23043#0" expanded="false" />
+            <element signature="e#23305#23813#0" expanded="false" />
+            <element signature="e#23877#24613#0" expanded="false" />
+            <element signature="e#24780#25589#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -584,14 +486,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/api/img.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="26" lean-forward="false" selection-start-line="0" selection-start-column="21" selection-end-line="0" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/api/img.js" />
     <entry file="file://$PROJECT_DIR$/src/App.vue">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-125">
@@ -604,7 +499,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -618,17 +512,29 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/views/nav1/Page1.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="417">
-          <caret line="145" column="44" lean-forward="false" selection-start-line="145" selection-start-column="44" selection-end-line="145" selection-end-column="44" />
+        <state relative-caret-position="5225">
+          <caret line="217" column="27" lean-forward="false" selection-start-line="217" selection-start-column="20" selection-end-line="217" selection-end-column="27" />
           <folding>
-            <element signature="e#9644#9683#0" expanded="true" />
-            <element signature="e#9838#10003#0" expanded="true" />
-            <element signature="e#10130#10447#0" expanded="false" />
-            <element signature="e#19062#19178#0" expanded="false" />
-            <element signature="e#19228#19836#0" expanded="false" />
-            <element signature="e#19891#20782#0" expanded="false" />
-            <element signature="e#21031#21434#0" expanded="false" />
-            <element signature="e#21483#22088#0" expanded="false" />
+            <element signature="e#9633#9672#0" expanded="true" />
+            <element signature="e#9827#9992#0" expanded="true" />
+            <element signature="e#10119#10436#0" expanded="false" />
+            <element signature="e#11489#11835#0" expanded="false" />
+            <element signature="e#12320#12697#0" expanded="false" />
+            <element signature="e#13178#13554#0" expanded="false" />
+            <element signature="e#13653#13752#0" expanded="false" />
+            <element signature="e#13810#13908#0" expanded="false" />
+            <element signature="e#13951#14003#0" expanded="false" />
+            <element signature="e#14063#15640#0" expanded="false" />
+            <element signature="e#15692#19127#0" expanded="false" />
+            <element signature="e#19185#19621#0" expanded="false" />
+            <element signature="e#19675#20562#0" expanded="false" />
+            <element signature="e#20630#21235#0" expanded="false" />
+            <element signature="e#21304#21420#0" expanded="false" />
+            <element signature="e#21475#22366#0" expanded="false" />
+            <element signature="e#22435#23043#0" expanded="false" />
+            <element signature="e#23305#23813#0" expanded="false" />
+            <element signature="e#23877#24613#0" expanded="false" />
+            <element signature="e#24780#25589#0" expanded="false" />
           </folding>
         </state>
       </provider>

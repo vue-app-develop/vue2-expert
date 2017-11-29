@@ -6,9 +6,9 @@
                 <el-row>
                     <el-col :xs="4" :sm="4" :md="4" :lg="4">
                         <el-form-item label="设备类">
-                            <el-select v-model="filters.equipmentCategory" multiple placeholder="请选择">
+                            <el-select v-model="filters.equipmentCategory" placeholder="请选择设备类">
                                 <el-option
-                                        v-for="item in equipmentCategories"
+                                        v-for="item in categorySource"
                                         :key="item.value"
                                         :label="item.label"
                                         :value="item.value">
@@ -218,13 +218,7 @@
                     keyWord: '',
                 },
                 panelTitle: '告警知识列表',
-                equipmentCategories: [{
-                    value: '1',
-                    label: '1天'
-                }, {
-                    value: '2',
-                    label: '2天'
-                },],
+                categorySource: [],
                 knowledge: [],
                 total: 0,
                 listLoading: false,
@@ -248,13 +242,11 @@
                 listQuery: {
                     curPage: 1,
                     limit: 20,
-                    pageSize: 10,
-                    equipmentCategory: undefined,
-                    keyWord: undefined,
-                    strOrder: undefined
+                    pageSize: 10
                 },
 
                 detailFormVisible: false,//详情界面是否显示
+                //详情界面数据
                 detailForm: {
                     knowledgeTitle: '',
                     keyWord: '',
@@ -269,6 +261,7 @@
 
                 editFormVisible: false,//编辑界面是否显示
                 editLoading: false,
+                //编辑界面验证
                 editFormRules: {
                     knowledgeTitle: [
                         {required: true, message: '请输入名称', trigger: 'blur'}
@@ -285,6 +278,7 @@
                     solution: '',
                     equipmentCategory: '',
                     baseTypeId: '',
+                    remark:'',
                     createUser: '',
                     accessoryKey: '',
                     image_uri: ''
@@ -292,6 +286,7 @@
 
                 addFormVisible: false,//新增界面是否显示
                 addLoading: false,
+                //新增界面验证
                 addFormRules: {
                     knowledgeTitle: [
                         {required: true, message: '请输入名称', trigger: 'blur'}
@@ -308,6 +303,7 @@
                     solution: '',
                     equipmentCategory: '',
                     baseTypeId: '',
+                    remark:'',
                     createUser: '',
                     accessoryKey: '',
                     image_uri:''
@@ -321,6 +317,7 @@
                 this.listQuery.pageSize = val;
                 this.getKnowledge();
             },
+            //操作分页
             handleCurrentChange(val) {
                 this.listQuery.curPage = val;
                 this.getKnowledge();
@@ -329,16 +326,54 @@
             on_refresh(){
                 this.getKnowledge();
             },
+            //获取设备类型
+            getEquipmentCategories() {
+                let _this = this;
+                _this.categorySource = [];
+                let para = {};
+                jQuery.ajax({
+                    async: true,
+                    type: 'GET',
+                    dataType: 'jsonp',
+                    jsonp: 'jsoncallback',
+                    data: para,
+                    timeout: 5000,
+                    url: base.baseUrl + "/ExpertKnowledgeService.svc/GetEquipmentCategory",
+                    success: function (res) {
+                        let equipmentCategories = {};
+                        if (res) {
+                            equipmentCategories = JSON.parse(res);
+                        }
+                        if (equipmentCategories.length > 0) {
+                            for (let equipmentCategory of equipmentCategories) {
+                                let item = {
+                                    EquipmentCategoryId: '',
+                                    EquipmentCategoryName: ''
+                                };
+                                item.EquipmentCategoryId = equipmentCategory.EquipmentCategoryId;
+                                item.EquipmentCategoryName = equipmentCategory.EquipmentCategoryName;
+                                _this.categorySource.push({
+                                    label: item.EquipmentCategoryName,
+                                    value: parseInt(item.EquipmentCategoryId)
+                                });
+                            }
+                        }
+                    }
+                });
+            },
             //获取告警知识列表
             getKnowledge() {
                 let _this = this;
                 _this.knowledge = [];
 
+                console.log('_this.filters.equipmentCategory' + _this.filters.equipmentCategory);
+                console.log('_this.filters.keyWord' + _this.filters.keyWord);
+
                 let para = {
                     pageNo: _this.listQuery.curPage,
                     pageSize: _this.listQuery.pageSize,
-//                    strOrder: 'CreateTime DESC',
-//                    equipmentCategory: _this.filters.equipmentCategory,
+                    strOrder: 'CreateTime DESC',
+                    equipmentCategory: _this.filters.equipmentCategory,
                     keyWord: _this.filters.keyWord
                 };
                 _this.listLoading = true;
@@ -350,12 +385,10 @@
                     jsonp: 'jsoncallback',
                     data: para,
                     timeout: 5000,
-                    url: base.baseUrl + "/ExpertKnowledgeService.svc/getExpertKnowledge",
+                    url: base.baseUrl + "/ExpertKnowledgeService.svc/GetExpertKnowledge",
                     success: function (res) {
-                        console.log('res: ' + JSON.stringify(res));
                         let index1 = res.indexOf("]");
                         let knowledge = JSON.parse(res.substr(0, index1 + 1));
-                        console.log('knowledge: ' + JSON.stringify(knowledge));
                         let totalStr = res.substr(index1 + 2, res.length - 1);
                         let index2 = totalStr.indexOf(":");
                         totalStr = totalStr.substr(index2 + 2, totalStr.length - index2 - 3)
@@ -391,15 +424,123 @@
                                 item.applyCount = know.ApplyCount;
 
                                 _this.knowledge.push(item);
-                                console.log('_this.knowledge: ' + JSON.stringify(_this.knowledge));
                             }
                         }
+                        console.log('_this.knowledge: ' + JSON.stringify(_this.knowledge));
                     }
                 });
                 setTimeout(() => {
                     this.listLoading = false;
                 }, 1000);
             },
+            //显示新增界面
+            handleAdd: function () {
+                this.addFormVisible = true;
+                this.addForm = {
+                    knowledgeTitle: '',
+                    keyWord: '',
+                    problem: '',
+                    solution: '',
+                    equipmentCategory: '',
+//                    baseTypeId: '',
+                    remark:'',
+                    createUser: '',
+                    accessoryKey: ''
+                };
+            },
+            //新增
+            addSubmit: function () {
+                this.$refs.addForm.validate((valid) => {
+                    if (valid) {
+                        this.$confirm('确认提交吗？', '提示', {}).then(() => {
+                            this.addLoading = true;
+                            //NProgress.start();
+                            let para = Object.assign({}, this.addForm);
+                            $.ajax({
+                                async: true,
+                                type: 'GET',
+                                jsonp: 'jsoncallback',
+                                data: para,
+                                url: base.baseUrl + "/ExpertKnowledgeService.svc/AddExpertKnowledge",
+                                success: this.addSuccess,
+                                dataType: 'jsonp'
+                            });
+                        });
+                    }
+                });
+            },
+            //新增结果
+            addSuccess: function (res, status) {
+                let data = JSON.parse(res);
+
+                if (data.result === true) {
+                    this.$message({
+                        message: '新增成功',
+                        type: 'success'
+                    });
+                } else {
+                    this.$message({
+                        message: '新增失败',
+                        type: 'success'
+                    });
+                }
+                this.$refs['addForm'].resetFields();
+                this.addFormVisible = false;
+                this.addLoading = false;
+                this.getKnowledge();
+            },
+            //显示编辑界面
+            handleEdit: function (index, row) {
+                this.editFormVisible = true;
+                this.editForm = Object.assign({}, row);
+            },
+            //编辑
+            editSubmit: function () {
+                this.$refs.editForm.validate((valid) => {
+                    if (valid) {
+                        this.$confirm('确认提交吗？', '提示', {}).then(() => {
+                            this.editLoading = true;
+                            //NProgress.start();
+                            let para = Object.assign({}, this.editForm);
+                            $.ajax({
+                                async: true,
+                                type: 'GET',
+                                jsonp: 'jsoncallback',
+                                data: para,
+                                url: base.baseUrl + "/ExpertKnowledgeService.svc/UpdExpertKnowledge",
+                                success: this.editSuccess,
+                                dataType: 'jsonp'
+                            });
+                        });
+                    }
+                });
+            },
+            //编辑结果
+            editSuccess: function (res, status) {
+                let data = JSON.parse(res);
+
+                if (data.result === true) {
+                    this.$message({
+                        message: '修改成功',
+                        type: 'success'
+                    });
+                } else {
+                    this.$message({
+                        message: '修改失败',
+                        type: 'success'
+                    });
+                }
+                this.$refs['editForm'].resetFields();
+                this.editFormVisible = false;
+                this.editLoading = false;
+                this.getKnowledge();
+            },
+            //显示详情界面
+            handleDetail: function (index, row) {
+                this.detailFormVisible = true;
+                this.detailForm = Object.assign({}, row);
+            },
+            //删除结果
             deleteSuccess: function (res, status) {
                 let data = JSON.parse(res);
 
@@ -438,110 +579,7 @@
 
                 });
             },
-            //显示编辑界面
-            handleEdit: function (index, row) {
-                this.editFormVisible = true;
-                this.editForm = Object.assign({}, row);
-            },
-            editSuccess: function (res, status) {
-                let data = JSON.parse(res);
-
-                if (data.result === true) {
-                    this.$message({
-                        message: '修改成功',
-                        type: 'success'
-                    });
-                } else {
-                    this.$message({
-                        message: '修改失败',
-                        type: 'success'
-                    });
-                }
-                this.$refs['editForm'].resetFields();
-                this.editFormVisible = false;
-                this.editLoading = false;
-                this.getKnowledge();
-            },
-            //编辑
-            editSubmit: function () {
-                this.$refs.editForm.validate((valid) => {
-                    if (valid) {
-                        this.$confirm('确认提交吗？', '提示', {}).then(() => {
-                            this.editLoading = true;
-                            //NProgress.start();
-                            let para = Object.assign({}, this.editForm);
-                            $.ajax({
-                                async: true,
-                                type: 'GET',
-                                jsonp: 'jsoncallback',
-                                data: para,
-                                url: base.baseUrl + "/ExpertKnowledgeService.svc/UpdExpertKnowledge",
-                                success: this.editSuccess,
-                                dataType: 'jsonp'
-                            });
-                        });
-                    }
-                });
-            },
-            //显示详情界面
-            handleDetail: function (index, row) {
-                this.detailFormVisible = true;
-                this.detailForm = Object.assign({}, row);
-            },
-            //显示新增界面
-            handleAdd: function () {
-                this.addFormVisible = true;
-                this.addForm = {
-                    knowledgeTitle: '',
-                    keyWord: '',
-                    problem: '',
-                    solution: '',
-                    equipmentCategory: '',
-                    baseTypeId: '',
-                    createUser: '',
-                    accessoryKey: ''
-                };
-            },
-            addSuccess: function (res, status) {
-                let data = JSON.parse(res);
-
-                if (data.result === true) {
-                    this.$message({
-                        message: '新增成功',
-                        type: 'success'
-                    });
-                } else {
-                    this.$message({
-                        message: '新增失败',
-                        type: 'success'
-                    });
-                }
-                this.$refs['addForm'].resetFields();
-                this.addFormVisible = false;
-                this.addLoading = false;
-                this.getKnowledge();
-            },
-            //新增
-            addSubmit: function () {
-                this.$refs.addForm.validate((valid) => {
-                    if (valid) {
-                        this.$confirm('确认提交吗？', '提示', {}).then(() => {
-                            this.addLoading = true;
-                            //NProgress.start();
-                            let para = Object.assign({}, this.addForm);
-                            $.ajax({
-                                async: true,
-                                type: 'GET',
-                                jsonp: 'jsoncallback',
-                                data: para,
-                                url: base.baseUrl + "/ExpertKnowledgeService.svc/AddExpertKnowledge",
-                                success: this.addSuccess,
-                                dataType: 'jsonp'
-                            });
-                        });
-                    }
-                });
-            },
+            //选择行
             selsChange: function (sels) {
                 this.sels = sels;
             },
@@ -569,6 +607,7 @@
             }
         },
         mounted() {
+            this.getEquipmentCategories();
             this.getKnowledge();
         }
     }
