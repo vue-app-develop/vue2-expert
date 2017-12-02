@@ -92,6 +92,16 @@
                 <el-form-item label="名称" prop="knowledgeTitle" style="width: 450px;">
                     <el-input v-model="addForm.knowledgeTitle" placeholder="请输入名称" auto-complete="off"></el-input>
                 </el-form-item>
+                <el-form-item label="设备类型" prop="equipmentCategory">
+                    <el-select v-model="addForm.equipmentCategory" placeholder="请选择设备类" style="width: 350px;">
+                        <el-option
+                                v-for="item in categorySource"
+                                :key="item.value"
+                                :label="item.label"
+                                :value="item.value">
+                        </el-option>
+                    </el-select>
+                </el-form-item>
                 <el-form-item label="问题现象" prop="problem" style="width: 450px;">
                     <el-input
                             type="textarea"
@@ -111,25 +121,14 @@
                 <el-form-item label="关键词" prop="keyWord" style="width: 450px;">
                     <el-input v-model="addForm.keyWord" placeholder="请输入关键词" auto-complete="off"></el-input>
                     (多个关键字之间用“,”分隔)
-                    <!--<el-tag-->
-                    <!--:key="tag"-->
-                    <!--v-for="tag in dynamicTags"-->
-                    <!--closable-->
-                    <!--:disable-transitions="false"-->
-                    <!--@close="handleClose(tag)">-->
-                    <!--{{tag}}-->
-                    <!--</el-tag>-->
-                    <!--<el-input-->
-                    <!--class="input-new-tag"-->
-                    <!--v-if="inputVisible"-->
-                    <!--v-model="inputValue"-->
-                    <!--ref="saveTagInput"-->
-                    <!--size="small"-->
-                    <!--@keyup.enter.native="handleInputConfirm"-->
-                    <!--@blur="handleInputConfirm"-->
-                    <!--&gt;-->
-                    <!--</el-input>-->
-                    <!--<el-button v-else class="button-new-tag" size="small" @click="showInput">+ New Tag</el-button>-->
+                </el-form-item>
+                <el-form-item label="备注" prop="remark" style="width: 450px;">
+                    <el-input
+                            type="textarea"
+                            :autosize="{ minRows: 2, maxRows: 10}"
+                            placeholder="请输入备注"
+                            v-model="addForm.remark">
+                    </el-input>
                 </el-form-item>
                 <el-form-item>
                     <el-upload
@@ -148,7 +147,7 @@
                     </el-upload>
                 </el-form-item>
                 <!--<el-form-item>-->
-                    <!--<Upload v-model="addForm.image_uri"></Upload>-->
+                <!--<Upload v-model="addForm.image_uri"></Upload>-->
                 <!--</el-form-item>-->
             </el-form>
             <div slot="footer" class="dialog-footer">
@@ -162,6 +161,16 @@
             <el-form :model="editForm" label-width="100px" :rules="editFormRules" ref="editForm">
                 <el-form-item label="名称" prop="knowledgeTitle" style="width: 450px;">
                     <el-input v-model="editForm.knowledgeTitle" placeholder="请输入名称" auto-complete="off"></el-input>
+                </el-form-item>
+                <el-form-item label="设备类型" prop="equipmentCategory">
+                    <el-select v-model="editForm.equipmentCategory" placeholder="请选择设备类" style="width: 350px;">
+                        <el-option
+                                v-for="item in categorySource"
+                                :key="item.value"
+                                :label="item.label"
+                                :value="item.value">
+                        </el-option>
+                    </el-select>
                 </el-form-item>
                 <el-form-item label="问题现象" prop="problem" style="width: 450px;">
                     <el-input
@@ -183,6 +192,15 @@
                     <el-input v-model="editForm.keyWord" placeholder="请输入关键词" auto-complete="off"></el-input>
                     (多个关键字之间用“,”分隔)
                 </el-form-item>
+                <el-checkbox v-model="editForm.isVerified" style="margin-left: 100px;margin-bottom: 20px;">是否验证</el-checkbox>
+                <el-form-item label="备注" prop="remark" style="width: 450px;">
+                    <el-input
+                            type="textarea"
+                            :autosize="{ minRows: 2, maxRows: 10}"
+                            placeholder="请输入备注"
+                            v-model="editForm.remark">
+                    </el-input>
+                </el-form-item>
                 <el-form-item>
                     <Upload v-model="editForm.image_uri"></Upload>
                 </el-form-item>
@@ -197,11 +215,22 @@
         <el-dialog title="告警知识详情" v-model="detailFormVisible" :close-on-click-modal="false">
             <el-form :model="detailForm" label-width="100px">
                 <el-form-item label="名称" style="width: 450px;">
-                    <el-input :disabled="true" v-model="detailForm.knowledgeTitle" auto-complete="off"></el-input>
+                    <el-input :readonly="true" v-model="detailForm.knowledgeTitle" auto-complete="off"></el-input>
+                </el-form-item>
+                <el-form-item label="设备类型">
+                    <el-select :disabled="true" v-model="detailForm.equipmentCategory" placeholder="请选择设备类"
+                               style="width: 350px;">
+                        <el-option
+                                v-for="item in categorySource"
+                                :key="item.value"
+                                :label="item.label"
+                                :value="item.value">
+                        </el-option>
+                    </el-select>
                 </el-form-item>
                 <el-form-item label="问题现象" style="width: 450px;">
                     <el-input
-                            :disabled="true"
+                            :readonly="true"
                             type="textarea"
                             :autosize="{ minRows: 2, maxRows: 10}"
                             v-model="detailForm.problem">
@@ -209,14 +238,24 @@
                 </el-form-item>
                 <el-form-item label="解决方式" style="width: 450px;">
                     <el-input
-                            :disabled="true"
+                            :readonly="true"
                             type="textarea"
                             :autosize="{ minRows: 2, maxRows: 10}"
                             v-model="detailForm.solution">
                     </el-input>
                 </el-form-item>
                 <el-form-item label="关键词" style="width: 450px;">
-                    <el-input :disabled="true" v-model="detailForm.keyWord" auto-complete="off"></el-input>
+                    <el-input :readonly="true" v-model="detailForm.keyWord" auto-complete="off"></el-input>
+                </el-form-item>
+                <el-checkbox :disabled="true" v-model="detailForm.isVerified" style="margin-left: 100px;margin-bottom: 20px;">是否验证</el-checkbox>
+                <el-form-item label="备注" prop="remark" style="width: 450px;">
+                    <el-input
+                            :readonly="true"
+                            type="textarea"
+                            :autosize="{ minRows: 2, maxRows: 10}"
+                            placeholder="请输入备注"
+                            v-model="detailForm.remark">
+                    </el-input>
                 </el-form-item>
             </el-form>
         </el-dialog>
@@ -294,6 +333,7 @@
                     solution: '',
                     equipmentCategory: '',
                     baseTypeId: '',
+                    remark: '',
                     createUser: '',
                     accessoryKey: '',
                     image_uri: ''
@@ -318,6 +358,7 @@
                     solution: '',
                     equipmentCategory: '',
                     baseTypeId: '',
+                    isVerified: false,
                     remark: '',
                     createUser: '',
                     accessoryKey: '',
@@ -436,7 +477,7 @@
                         let totalStr = res.substr(index1 + 2, res.length - 1);
                         let index2 = totalStr.indexOf(":");
                         totalStr = totalStr.substr(index2 + 2, totalStr.length - index2 - 3)
-                        if(totalStr) {
+                        if (totalStr) {
                             _this.total = parseInt(totalStr);
                         }
 
@@ -462,8 +503,13 @@
                                 item.problem = know.Problem;
                                 item.solution = know.Solution;
                                 item.equipmentCategory = know.EquipmentCategory;
-                                item.knowledgeTitle = know.KnowledgeTitle;
-                                item.isVerified = know.IsVerified;
+                                item.remark = know.Remark;
+                                if(know.IsVerified == '1') {
+                                    item.isVerified = true;
+                                }else {
+                                    item.isVerified = false;
+                                }
+                                item.cTime = know.CreateTime;
                                 item.VerifyTime = know.VerifyTime;
                                 item.VerifyUser = know.VerifyUser;
                                 item.isInvalid = know.IsInvalid;
@@ -554,6 +600,11 @@
                             this.editLoading = true;
                             //NProgress.start();
                             let para = Object.assign({}, this.editForm);
+                            if(para.isVerified){
+                                para.isVerified = 1;
+                            }else{
+                                para.isVerified = 0;
+                            }
                             $.ajax({
                                 async: true,
                                 type: 'GET',
@@ -673,27 +724,6 @@
             handlePreview(file) {
                 console.log(file);
             }
-
-//            handleClose(tag) {
-//                this.dynamicTags.splice(this.dynamicTags.indexOf(tag), 1);
-//            },
-//
-//            //tag
-//            showInput() {
-//                this.inputVisible = true;
-//                this.$nextTick(_ => {
-//                    this.$refs.saveTagInput.$refs.input.focus();
-//                });
-//            },
-//
-//            handleInputConfirm() {
-//                let inputValue = this.inputValue;
-//                if (inputValue) {
-//                    this.dynamicTags.push(inputValue);
-//                }
-//                this.inputVisible = false;
-//                this.inputValue = '';
-//            }
         },
         mounted() {
             this.getEquipmentCategories();
