@@ -2,7 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4b5e382c-d06f-421d-824b-42eadee674ab" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/ajaxfileupload.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/jquery.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/views/nav1/Page1.vue" afterPath="$PROJECT_DIR$/src/views/nav1/Page1.vue" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -17,42 +20,10 @@
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Page1.vue" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/views/nav1/Page1.vue">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="167">
-              <caret line="220" column="40" lean-forward="false" selection-start-line="220" selection-start-column="40" selection-end-line="220" selection-end-column="40" />
-              <folding>
-                <element signature="n#style#0;n#el-select#0;n#el-form-item#1;n#el-form#0;n#el-dialog#0;n#section#0;n#template#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#el-form-item#2;n#el-form#0;n#el-dialog#0;n#section#0;n#template#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#el-form-item#3;n#el-form#0;n#el-dialog#0;n#section#0;n#template#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#el-button#1;n#el-upload#0;n#el-form-item#6;n#el-form#0;n#el-dialog#0;n#section#0;n#template#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#el-select#0;n#el-form-item#1;n#el-form#0;n#el-dialog#1;n#section#0;n#template#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#el-checkbox#0;n#el-form#0;n#el-dialog#1;n#section#0;n#template#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#el-select#0;n#el-form-item#1;n#el-form#0;n#el-dialog#2;n#section#0;n#template#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#el-checkbox#0;n#el-form#0;n#el-dialog#2;n#section#0;n#template#0;n#!!top" expanded="true" />
-                <element signature="e#14450#14767#0" expanded="false" />
-                <element signature="e#15246#15699#0" expanded="false" />
-                <element signature="e#18190#18289#0" expanded="false" />
-                <element signature="e#18348#18446#0" expanded="false" />
-                <element signature="e#18490#18542#0" expanded="false" />
-                <element signature="e#18603#20180#0" expanded="false" />
-                <element signature="e#25546#26151#0" expanded="false" />
-                <element signature="e#27574#28182#0" expanded="false" />
-                <element signature="e#28446#28954#0" expanded="false" />
-                <element signature="e#29019#29755#0" expanded="false" />
-                <element signature="e#29924#30733#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>cycleDays</find>
       <find>header</find>
       <find>get</find>
       <find>knowledge</find>
@@ -82,6 +53,7 @@
       <find>addForm</find>
       <find>isVerified</find>
       <find>editForm</find>
+      <find>btnfile</find>
     </findStrings>
     <replaceStrings>
       <replace>告警知识</replace>
@@ -104,7 +76,6 @@
         <option value="$PROJECT_DIR$/src/views/nav4/Page5.vue" />
         <option value="$PROJECT_DIR$/src/views/Home.vue" />
         <option value="$PROJECT_DIR$/src/routes.js" />
-        <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/config/dev.env.js" />
         <option value="$PROJECT_DIR$/config/index.js" />
         <option value="$PROJECT_DIR$/src/api/api.js" />
@@ -112,6 +83,8 @@
         <option value="$PROJECT_DIR$/src/api/urlConfig.js" />
         <option value="$PROJECT_DIR$/src/components/Upload/singleImage3.vue" />
         <option value="$PROJECT_DIR$/src/views/nav1/Page1.vue" />
+        <option value="$PROJECT_DIR$/dist/index.html" />
+        <option value="$PROJECT_DIR$/index.html" />
       </list>
     </option>
   </component>
@@ -169,7 +142,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
+              <option name="myItemId" value="static" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -186,10 +159,6 @@
               <option name="myItemId" value="src" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="vuex" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -201,33 +170,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="vue2-expert" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="vue2-expert" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="nav1" />
+              <option name="myItemId" value="dist" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -241,11 +184,12 @@
     <property name="nodejs_interpreter_path" value="/usr/local/bin/node" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Web" />
     <property name="HbShouldOpenHtmlAsHb" value="" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\github\vue2-expert\static" />
       <recent name="D:\github\vue2-expert\src\styles" />
       <recent name="D:\github\vue2-expert\src\api" />
       <recent name="D:\github\vue2-expert\src\components" />
@@ -363,25 +307,26 @@
       <workItem from="1512005467743" duration="1085000" />
       <workItem from="1512033326164" duration="1020000" />
       <workItem from="1512040635622" duration="3899000" />
-      <workItem from="1512202192338" duration="4698000" />
+      <workItem from="1512202192338" duration="4831000" />
+      <workItem from="1512349704459" duration="755000" />
+      <workItem from="1512616823580" duration="4340000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="48990000" />
+    <option name="totallyTimeSpent" value="54218000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1392405" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14240506" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21919303" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21919303" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.27153763" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2704471" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -411,25 +356,24 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="n#style#0;n#el-select#0;n#el-form-item#1;n#el-form#0;n#el-dialog#0;n#section#0;n#template#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#el-form-item#2;n#el-form#0;n#el-dialog#0;n#section#0;n#template#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#el-form-item#3;n#el-form#0;n#el-dialog#0;n#section#0;n#template#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#el-button#1;n#el-upload#0;n#el-form-item#6;n#el-form#0;n#el-dialog#0;n#section#0;n#template#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#el-select#0;n#el-form-item#1;n#el-form#0;n#el-dialog#1;n#section#0;n#template#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#el-checkbox#0;n#el-form#0;n#el-dialog#1;n#section#0;n#template#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#el-select#0;n#el-form-item#1;n#el-form#0;n#el-dialog#2;n#section#0;n#template#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#el-checkbox#0;n#el-form#0;n#el-dialog#2;n#section#0;n#template#0;n#!!top" expanded="true" />
-            <element signature="e#14450#14767#0" expanded="false" />
-            <element signature="e#15246#15699#0" expanded="false" />
-            <element signature="e#18190#18289#0" expanded="false" />
-            <element signature="e#18348#18446#0" expanded="false" />
-            <element signature="e#18490#18542#0" expanded="false" />
-            <element signature="e#18603#20180#0" expanded="false" />
-            <element signature="e#25546#26151#0" expanded="false" />
-            <element signature="e#27574#28182#0" expanded="false" />
-            <element signature="e#28446#28954#0" expanded="false" />
-            <element signature="e#29019#29755#0" expanded="false" />
-            <element signature="e#29924#30733#0" expanded="false" />
+            <element signature="n#style#0;n#el-select#0;n#el-form-item#1;n#el-form#0;n#el-dialog#0;n#section#0;n#template#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#el-form-item#2;n#el-form#0;n#el-dialog#0;n#section#0;n#template#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#el-form-item#3;n#el-form#0;n#el-dialog#0;n#section#0;n#template#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#el-select#0;n#el-form-item#1;n#el-form#0;n#el-dialog#1;n#section#0;n#template#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#el-checkbox#0;n#el-form#0;n#el-dialog#1;n#section#0;n#template#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#el-select#0;n#el-form-item#1;n#el-form#0;n#el-dialog#2;n#section#0;n#template#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#el-checkbox#0;n#el-form#0;n#el-dialog#2;n#section#0;n#template#0;n#!!top" expanded="false" />
+            <element signature="e#13695#14012#0" expanded="false" />
+            <element signature="e#14491#14944#0" expanded="false" />
+            <element signature="e#17435#17534#0" expanded="false" />
+            <element signature="e#17593#17691#0" expanded="false" />
+            <element signature="e#17735#17787#0" expanded="false" />
+            <element signature="e#17848#19425#0" expanded="false" />
+            <element signature="e#24791#25396#0" expanded="false" />
+            <element signature="e#26819#27427#0" expanded="false" />
+            <element signature="e#27691#28199#0" expanded="false" />
+            <element signature="e#28264#29000#0" expanded="false" />
+            <element signature="e#29169#29978#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -439,25 +383,24 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="n#style#0;n#el-select#0;n#el-form-item#1;n#el-form#0;n#el-dialog#0;n#section#0;n#template#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#el-form-item#2;n#el-form#0;n#el-dialog#0;n#section#0;n#template#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#el-form-item#3;n#el-form#0;n#el-dialog#0;n#section#0;n#template#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#el-button#1;n#el-upload#0;n#el-form-item#6;n#el-form#0;n#el-dialog#0;n#section#0;n#template#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#el-select#0;n#el-form-item#1;n#el-form#0;n#el-dialog#1;n#section#0;n#template#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#el-checkbox#0;n#el-form#0;n#el-dialog#1;n#section#0;n#template#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#el-select#0;n#el-form-item#1;n#el-form#0;n#el-dialog#2;n#section#0;n#template#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#el-checkbox#0;n#el-form#0;n#el-dialog#2;n#section#0;n#template#0;n#!!top" expanded="true" />
-            <element signature="e#14450#14767#0" expanded="false" />
-            <element signature="e#15246#15699#0" expanded="false" />
-            <element signature="e#18190#18289#0" expanded="false" />
-            <element signature="e#18348#18446#0" expanded="false" />
-            <element signature="e#18490#18542#0" expanded="false" />
-            <element signature="e#18603#20180#0" expanded="false" />
-            <element signature="e#25546#26151#0" expanded="false" />
-            <element signature="e#27574#28182#0" expanded="false" />
-            <element signature="e#28446#28954#0" expanded="false" />
-            <element signature="e#29019#29755#0" expanded="false" />
-            <element signature="e#29924#30733#0" expanded="false" />
+            <element signature="n#style#0;n#el-select#0;n#el-form-item#1;n#el-form#0;n#el-dialog#0;n#section#0;n#template#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#el-form-item#2;n#el-form#0;n#el-dialog#0;n#section#0;n#template#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#el-form-item#3;n#el-form#0;n#el-dialog#0;n#section#0;n#template#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#el-select#0;n#el-form-item#1;n#el-form#0;n#el-dialog#1;n#section#0;n#template#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#el-checkbox#0;n#el-form#0;n#el-dialog#1;n#section#0;n#template#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#el-select#0;n#el-form-item#1;n#el-form#0;n#el-dialog#2;n#section#0;n#template#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#el-checkbox#0;n#el-form#0;n#el-dialog#2;n#section#0;n#template#0;n#!!top" expanded="false" />
+            <element signature="e#13695#14012#0" expanded="false" />
+            <element signature="e#14491#14944#0" expanded="false" />
+            <element signature="e#17435#17534#0" expanded="false" />
+            <element signature="e#17593#17691#0" expanded="false" />
+            <element signature="e#17735#17787#0" expanded="false" />
+            <element signature="e#17848#19425#0" expanded="false" />
+            <element signature="e#24791#25396#0" expanded="false" />
+            <element signature="e#26819#27427#0" expanded="false" />
+            <element signature="e#27691#28199#0" expanded="false" />
+            <element signature="e#28264#29000#0" expanded="false" />
+            <element signature="e#29169#29978#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -467,25 +410,24 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="n#style#0;n#el-select#0;n#el-form-item#1;n#el-form#0;n#el-dialog#0;n#section#0;n#template#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#el-form-item#2;n#el-form#0;n#el-dialog#0;n#section#0;n#template#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#el-form-item#3;n#el-form#0;n#el-dialog#0;n#section#0;n#template#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#el-button#1;n#el-upload#0;n#el-form-item#6;n#el-form#0;n#el-dialog#0;n#section#0;n#template#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#el-select#0;n#el-form-item#1;n#el-form#0;n#el-dialog#1;n#section#0;n#template#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#el-checkbox#0;n#el-form#0;n#el-dialog#1;n#section#0;n#template#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#el-select#0;n#el-form-item#1;n#el-form#0;n#el-dialog#2;n#section#0;n#template#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#el-checkbox#0;n#el-form#0;n#el-dialog#2;n#section#0;n#template#0;n#!!top" expanded="true" />
-            <element signature="e#14450#14767#0" expanded="false" />
-            <element signature="e#15246#15699#0" expanded="false" />
-            <element signature="e#18190#18289#0" expanded="false" />
-            <element signature="e#18348#18446#0" expanded="false" />
-            <element signature="e#18490#18542#0" expanded="false" />
-            <element signature="e#18603#20180#0" expanded="false" />
-            <element signature="e#25546#26151#0" expanded="false" />
-            <element signature="e#27574#28182#0" expanded="false" />
-            <element signature="e#28446#28954#0" expanded="false" />
-            <element signature="e#29019#29755#0" expanded="false" />
-            <element signature="e#29924#30733#0" expanded="false" />
+            <element signature="n#style#0;n#el-select#0;n#el-form-item#1;n#el-form#0;n#el-dialog#0;n#section#0;n#template#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#el-form-item#2;n#el-form#0;n#el-dialog#0;n#section#0;n#template#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#el-form-item#3;n#el-form#0;n#el-dialog#0;n#section#0;n#template#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#el-select#0;n#el-form-item#1;n#el-form#0;n#el-dialog#1;n#section#0;n#template#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#el-checkbox#0;n#el-form#0;n#el-dialog#1;n#section#0;n#template#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#el-select#0;n#el-form-item#1;n#el-form#0;n#el-dialog#2;n#section#0;n#template#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#el-checkbox#0;n#el-form#0;n#el-dialog#2;n#section#0;n#template#0;n#!!top" expanded="false" />
+            <element signature="e#13695#14012#0" expanded="false" />
+            <element signature="e#14491#14944#0" expanded="false" />
+            <element signature="e#17435#17534#0" expanded="false" />
+            <element signature="e#17593#17691#0" expanded="false" />
+            <element signature="e#17735#17787#0" expanded="false" />
+            <element signature="e#17848#19425#0" expanded="false" />
+            <element signature="e#24791#25396#0" expanded="false" />
+            <element signature="e#26819#27427#0" expanded="false" />
+            <element signature="e#27691#28199#0" expanded="false" />
+            <element signature="e#28264#29000#0" expanded="false" />
+            <element signature="e#29169#29978#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -495,25 +437,24 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="n#style#0;n#el-select#0;n#el-form-item#1;n#el-form#0;n#el-dialog#0;n#section#0;n#template#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#el-form-item#2;n#el-form#0;n#el-dialog#0;n#section#0;n#template#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#el-form-item#3;n#el-form#0;n#el-dialog#0;n#section#0;n#template#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#el-button#1;n#el-upload#0;n#el-form-item#6;n#el-form#0;n#el-dialog#0;n#section#0;n#template#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#el-select#0;n#el-form-item#1;n#el-form#0;n#el-dialog#1;n#section#0;n#template#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#el-checkbox#0;n#el-form#0;n#el-dialog#1;n#section#0;n#template#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#el-select#0;n#el-form-item#1;n#el-form#0;n#el-dialog#2;n#section#0;n#template#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#el-checkbox#0;n#el-form#0;n#el-dialog#2;n#section#0;n#template#0;n#!!top" expanded="true" />
-            <element signature="e#14450#14767#0" expanded="false" />
-            <element signature="e#15246#15699#0" expanded="false" />
-            <element signature="e#18190#18289#0" expanded="false" />
-            <element signature="e#18348#18446#0" expanded="false" />
-            <element signature="e#18490#18542#0" expanded="false" />
-            <element signature="e#18603#20180#0" expanded="false" />
-            <element signature="e#25546#26151#0" expanded="false" />
-            <element signature="e#27574#28182#0" expanded="false" />
-            <element signature="e#28446#28954#0" expanded="false" />
-            <element signature="e#29019#29755#0" expanded="false" />
-            <element signature="e#29924#30733#0" expanded="false" />
+            <element signature="n#style#0;n#el-select#0;n#el-form-item#1;n#el-form#0;n#el-dialog#0;n#section#0;n#template#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#el-form-item#2;n#el-form#0;n#el-dialog#0;n#section#0;n#template#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#el-form-item#3;n#el-form#0;n#el-dialog#0;n#section#0;n#template#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#el-select#0;n#el-form-item#1;n#el-form#0;n#el-dialog#1;n#section#0;n#template#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#el-checkbox#0;n#el-form#0;n#el-dialog#1;n#section#0;n#template#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#el-select#0;n#el-form-item#1;n#el-form#0;n#el-dialog#2;n#section#0;n#template#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#el-checkbox#0;n#el-form#0;n#el-dialog#2;n#section#0;n#template#0;n#!!top" expanded="false" />
+            <element signature="e#13695#14012#0" expanded="false" />
+            <element signature="e#14491#14944#0" expanded="false" />
+            <element signature="e#17435#17534#0" expanded="false" />
+            <element signature="e#17593#17691#0" expanded="false" />
+            <element signature="e#17735#17787#0" expanded="false" />
+            <element signature="e#17848#19425#0" expanded="false" />
+            <element signature="e#24791#25396#0" expanded="false" />
+            <element signature="e#26819#27427#0" expanded="false" />
+            <element signature="e#27691#28199#0" expanded="false" />
+            <element signature="e#28264#29000#0" expanded="false" />
+            <element signature="e#29169#29978#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -523,25 +464,24 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="n#style#0;n#el-select#0;n#el-form-item#1;n#el-form#0;n#el-dialog#0;n#section#0;n#template#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#el-form-item#2;n#el-form#0;n#el-dialog#0;n#section#0;n#template#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#el-form-item#3;n#el-form#0;n#el-dialog#0;n#section#0;n#template#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#el-button#1;n#el-upload#0;n#el-form-item#6;n#el-form#0;n#el-dialog#0;n#section#0;n#template#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#el-select#0;n#el-form-item#1;n#el-form#0;n#el-dialog#1;n#section#0;n#template#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#el-checkbox#0;n#el-form#0;n#el-dialog#1;n#section#0;n#template#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#el-select#0;n#el-form-item#1;n#el-form#0;n#el-dialog#2;n#section#0;n#template#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#el-checkbox#0;n#el-form#0;n#el-dialog#2;n#section#0;n#template#0;n#!!top" expanded="true" />
-            <element signature="e#14450#14767#0" expanded="false" />
-            <element signature="e#15246#15699#0" expanded="false" />
-            <element signature="e#18190#18289#0" expanded="false" />
-            <element signature="e#18348#18446#0" expanded="false" />
-            <element signature="e#18490#18542#0" expanded="false" />
-            <element signature="e#18603#20180#0" expanded="false" />
-            <element signature="e#25546#26151#0" expanded="false" />
-            <element signature="e#27574#28182#0" expanded="false" />
-            <element signature="e#28446#28954#0" expanded="false" />
-            <element signature="e#29019#29755#0" expanded="false" />
-            <element signature="e#29924#30733#0" expanded="false" />
+            <element signature="n#style#0;n#el-select#0;n#el-form-item#1;n#el-form#0;n#el-dialog#0;n#section#0;n#template#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#el-form-item#2;n#el-form#0;n#el-dialog#0;n#section#0;n#template#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#el-form-item#3;n#el-form#0;n#el-dialog#0;n#section#0;n#template#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#el-select#0;n#el-form-item#1;n#el-form#0;n#el-dialog#1;n#section#0;n#template#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#el-checkbox#0;n#el-form#0;n#el-dialog#1;n#section#0;n#template#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#el-select#0;n#el-form-item#1;n#el-form#0;n#el-dialog#2;n#section#0;n#template#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#el-checkbox#0;n#el-form#0;n#el-dialog#2;n#section#0;n#template#0;n#!!top" expanded="false" />
+            <element signature="e#13695#14012#0" expanded="false" />
+            <element signature="e#14491#14944#0" expanded="false" />
+            <element signature="e#17435#17534#0" expanded="false" />
+            <element signature="e#17593#17691#0" expanded="false" />
+            <element signature="e#17735#17787#0" expanded="false" />
+            <element signature="e#17848#19425#0" expanded="false" />
+            <element signature="e#24791#25396#0" expanded="false" />
+            <element signature="e#26819#27427#0" expanded="false" />
+            <element signature="e#27691#28199#0" expanded="false" />
+            <element signature="e#28264#29000#0" expanded="false" />
+            <element signature="e#29169#29978#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -551,25 +491,24 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="n#style#0;n#el-select#0;n#el-form-item#1;n#el-form#0;n#el-dialog#0;n#section#0;n#template#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#el-form-item#2;n#el-form#0;n#el-dialog#0;n#section#0;n#template#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#el-form-item#3;n#el-form#0;n#el-dialog#0;n#section#0;n#template#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#el-button#1;n#el-upload#0;n#el-form-item#6;n#el-form#0;n#el-dialog#0;n#section#0;n#template#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#el-select#0;n#el-form-item#1;n#el-form#0;n#el-dialog#1;n#section#0;n#template#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#el-checkbox#0;n#el-form#0;n#el-dialog#1;n#section#0;n#template#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#el-select#0;n#el-form-item#1;n#el-form#0;n#el-dialog#2;n#section#0;n#template#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#el-checkbox#0;n#el-form#0;n#el-dialog#2;n#section#0;n#template#0;n#!!top" expanded="true" />
-            <element signature="e#14450#14767#0" expanded="false" />
-            <element signature="e#15246#15699#0" expanded="false" />
-            <element signature="e#18190#18289#0" expanded="false" />
-            <element signature="e#18348#18446#0" expanded="false" />
-            <element signature="e#18490#18542#0" expanded="false" />
-            <element signature="e#18603#20180#0" expanded="false" />
-            <element signature="e#25546#26151#0" expanded="false" />
-            <element signature="e#27574#28182#0" expanded="false" />
-            <element signature="e#28446#28954#0" expanded="false" />
-            <element signature="e#29019#29755#0" expanded="false" />
-            <element signature="e#29924#30733#0" expanded="false" />
+            <element signature="n#style#0;n#el-select#0;n#el-form-item#1;n#el-form#0;n#el-dialog#0;n#section#0;n#template#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#el-form-item#2;n#el-form#0;n#el-dialog#0;n#section#0;n#template#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#el-form-item#3;n#el-form#0;n#el-dialog#0;n#section#0;n#template#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#el-select#0;n#el-form-item#1;n#el-form#0;n#el-dialog#1;n#section#0;n#template#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#el-checkbox#0;n#el-form#0;n#el-dialog#1;n#section#0;n#template#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#el-select#0;n#el-form-item#1;n#el-form#0;n#el-dialog#2;n#section#0;n#template#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#el-checkbox#0;n#el-form#0;n#el-dialog#2;n#section#0;n#template#0;n#!!top" expanded="false" />
+            <element signature="e#13695#14012#0" expanded="false" />
+            <element signature="e#14491#14944#0" expanded="false" />
+            <element signature="e#17435#17534#0" expanded="false" />
+            <element signature="e#17593#17691#0" expanded="false" />
+            <element signature="e#17735#17787#0" expanded="false" />
+            <element signature="e#17848#19425#0" expanded="false" />
+            <element signature="e#24791#25396#0" expanded="false" />
+            <element signature="e#26819#27427#0" expanded="false" />
+            <element signature="e#27691#28199#0" expanded="false" />
+            <element signature="e#28264#29000#0" expanded="false" />
+            <element signature="e#29169#29978#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -579,25 +518,78 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="n#style#0;n#el-select#0;n#el-form-item#1;n#el-form#0;n#el-dialog#0;n#section#0;n#template#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#el-form-item#2;n#el-form#0;n#el-dialog#0;n#section#0;n#template#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#el-form-item#3;n#el-form#0;n#el-dialog#0;n#section#0;n#template#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#el-button#1;n#el-upload#0;n#el-form-item#6;n#el-form#0;n#el-dialog#0;n#section#0;n#template#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#el-select#0;n#el-form-item#1;n#el-form#0;n#el-dialog#1;n#section#0;n#template#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#el-checkbox#0;n#el-form#0;n#el-dialog#1;n#section#0;n#template#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#el-select#0;n#el-form-item#1;n#el-form#0;n#el-dialog#2;n#section#0;n#template#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#el-checkbox#0;n#el-form#0;n#el-dialog#2;n#section#0;n#template#0;n#!!top" expanded="true" />
-            <element signature="e#14450#14767#0" expanded="false" />
-            <element signature="e#15246#15699#0" expanded="false" />
-            <element signature="e#18190#18289#0" expanded="false" />
-            <element signature="e#18348#18446#0" expanded="false" />
-            <element signature="e#18490#18542#0" expanded="false" />
-            <element signature="e#18603#20180#0" expanded="false" />
-            <element signature="e#25546#26151#0" expanded="false" />
-            <element signature="e#27574#28182#0" expanded="false" />
-            <element signature="e#28446#28954#0" expanded="false" />
-            <element signature="e#29019#29755#0" expanded="false" />
-            <element signature="e#29924#30733#0" expanded="false" />
+            <element signature="n#style#0;n#el-select#0;n#el-form-item#1;n#el-form#0;n#el-dialog#0;n#section#0;n#template#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#el-form-item#2;n#el-form#0;n#el-dialog#0;n#section#0;n#template#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#el-form-item#3;n#el-form#0;n#el-dialog#0;n#section#0;n#template#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#el-select#0;n#el-form-item#1;n#el-form#0;n#el-dialog#1;n#section#0;n#template#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#el-checkbox#0;n#el-form#0;n#el-dialog#1;n#section#0;n#template#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#el-select#0;n#el-form-item#1;n#el-form#0;n#el-dialog#2;n#section#0;n#template#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#el-checkbox#0;n#el-form#0;n#el-dialog#2;n#section#0;n#template#0;n#!!top" expanded="false" />
+            <element signature="e#13695#14012#0" expanded="false" />
+            <element signature="e#14491#14944#0" expanded="false" />
+            <element signature="e#17435#17534#0" expanded="false" />
+            <element signature="e#17593#17691#0" expanded="false" />
+            <element signature="e#17735#17787#0" expanded="false" />
+            <element signature="e#17848#19425#0" expanded="false" />
+            <element signature="e#24791#25396#0" expanded="false" />
+            <element signature="e#26819#27427#0" expanded="false" />
+            <element signature="e#27691#28199#0" expanded="false" />
+            <element signature="e#28264#29000#0" expanded="false" />
+            <element signature="e#29169#29978#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/views/nav1/Page1.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="n#style#0;n#el-select#0;n#el-form-item#1;n#el-form#0;n#el-dialog#0;n#section#0;n#template#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#el-form-item#2;n#el-form#0;n#el-dialog#0;n#section#0;n#template#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#el-form-item#3;n#el-form#0;n#el-dialog#0;n#section#0;n#template#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#el-select#0;n#el-form-item#1;n#el-form#0;n#el-dialog#1;n#section#0;n#template#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#el-checkbox#0;n#el-form#0;n#el-dialog#1;n#section#0;n#template#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#el-select#0;n#el-form-item#1;n#el-form#0;n#el-dialog#2;n#section#0;n#template#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#el-checkbox#0;n#el-form#0;n#el-dialog#2;n#section#0;n#template#0;n#!!top" expanded="false" />
+            <element signature="e#13695#14012#0" expanded="false" />
+            <element signature="e#14491#14944#0" expanded="false" />
+            <element signature="e#17435#17534#0" expanded="false" />
+            <element signature="e#17593#17691#0" expanded="false" />
+            <element signature="e#17735#17787#0" expanded="false" />
+            <element signature="e#17848#19425#0" expanded="false" />
+            <element signature="e#24791#25396#0" expanded="false" />
+            <element signature="e#26819#27427#0" expanded="false" />
+            <element signature="e#27691#28199#0" expanded="false" />
+            <element signature="e#28264#29000#0" expanded="false" />
+            <element signature="e#29169#29978#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/views/nav1/Page1.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="n#style#0;n#el-select#0;n#el-form-item#1;n#el-form#0;n#el-dialog#0;n#section#0;n#template#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#el-form-item#2;n#el-form#0;n#el-dialog#0;n#section#0;n#template#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#el-form-item#3;n#el-form#0;n#el-dialog#0;n#section#0;n#template#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#el-select#0;n#el-form-item#1;n#el-form#0;n#el-dialog#1;n#section#0;n#template#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#el-checkbox#0;n#el-form#0;n#el-dialog#1;n#section#0;n#template#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#el-select#0;n#el-form-item#1;n#el-form#0;n#el-dialog#2;n#section#0;n#template#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#el-checkbox#0;n#el-form#0;n#el-dialog#2;n#section#0;n#template#0;n#!!top" expanded="false" />
+            <element signature="e#13695#14012#0" expanded="false" />
+            <element signature="e#14491#14944#0" expanded="false" />
+            <element signature="e#17435#17534#0" expanded="false" />
+            <element signature="e#17593#17691#0" expanded="false" />
+            <element signature="e#17735#17787#0" expanded="false" />
+            <element signature="e#17848#19425#0" expanded="false" />
+            <element signature="e#24791#25396#0" expanded="false" />
+            <element signature="e#26819#27427#0" expanded="false" />
+            <element signature="e#27691#28199#0" expanded="false" />
+            <element signature="e#28264#29000#0" expanded="false" />
+            <element signature="e#29169#29978#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -661,13 +653,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="350">
           <caret line="14" column="24" lean-forward="true" selection-start-line="14" selection-start-column="24" selection-end-line="14" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="6" column="7" lean-forward="true" selection-start-line="6" selection-start-column="7" selection-end-line="6" selection-end-column="7" />
         </state>
       </provider>
     </entry>
@@ -757,31 +742,62 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/static/ajaxfileupload.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/jquery.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="8" column="37" lean-forward="false" selection-start-line="8" selection-start-column="23" selection-end-line="8" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/views/nav1/Page1.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="167">
-          <caret line="220" column="40" lean-forward="false" selection-start-line="220" selection-start-column="40" selection-end-line="220" selection-end-column="40" />
+        <state relative-caret-position="50">
+          <caret line="134" column="109" lean-forward="false" selection-start-line="134" selection-start-column="109" selection-end-line="134" selection-end-column="109" />
           <folding>
-            <element signature="n#style#0;n#el-select#0;n#el-form-item#1;n#el-form#0;n#el-dialog#0;n#section#0;n#template#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#el-form-item#2;n#el-form#0;n#el-dialog#0;n#section#0;n#template#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#el-form-item#3;n#el-form#0;n#el-dialog#0;n#section#0;n#template#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#el-button#1;n#el-upload#0;n#el-form-item#6;n#el-form#0;n#el-dialog#0;n#section#0;n#template#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#el-select#0;n#el-form-item#1;n#el-form#0;n#el-dialog#1;n#section#0;n#template#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#el-checkbox#0;n#el-form#0;n#el-dialog#1;n#section#0;n#template#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#el-select#0;n#el-form-item#1;n#el-form#0;n#el-dialog#2;n#section#0;n#template#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#el-checkbox#0;n#el-form#0;n#el-dialog#2;n#section#0;n#template#0;n#!!top" expanded="true" />
-            <element signature="e#14450#14767#0" expanded="false" />
-            <element signature="e#15246#15699#0" expanded="false" />
-            <element signature="e#18190#18289#0" expanded="false" />
-            <element signature="e#18348#18446#0" expanded="false" />
-            <element signature="e#18490#18542#0" expanded="false" />
-            <element signature="e#18603#20180#0" expanded="false" />
-            <element signature="e#25546#26151#0" expanded="false" />
-            <element signature="e#27574#28182#0" expanded="false" />
-            <element signature="e#28446#28954#0" expanded="false" />
-            <element signature="e#29019#29755#0" expanded="false" />
-            <element signature="e#29924#30733#0" expanded="false" />
+            <element signature="n#style#0;n#el-select#0;n#el-form-item#1;n#el-form#0;n#el-dialog#0;n#section#0;n#template#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#el-form-item#2;n#el-form#0;n#el-dialog#0;n#section#0;n#template#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#el-form-item#3;n#el-form#0;n#el-dialog#0;n#section#0;n#template#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#el-select#0;n#el-form-item#1;n#el-form#0;n#el-dialog#1;n#section#0;n#template#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#el-checkbox#0;n#el-form#0;n#el-dialog#1;n#section#0;n#template#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#el-select#0;n#el-form-item#1;n#el-form#0;n#el-dialog#2;n#section#0;n#template#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#el-checkbox#0;n#el-form#0;n#el-dialog#2;n#section#0;n#template#0;n#!!top" expanded="false" />
+            <element signature="e#13695#14012#0" expanded="false" />
+            <element signature="e#14491#14944#0" expanded="false" />
+            <element signature="e#17435#17534#0" expanded="false" />
+            <element signature="e#17593#17691#0" expanded="false" />
+            <element signature="e#17735#17787#0" expanded="false" />
+            <element signature="e#17848#19425#0" expanded="false" />
+            <element signature="e#24791#25396#0" expanded="false" />
+            <element signature="e#26819#27427#0" expanded="false" />
+            <element signature="e#27691#28199#0" expanded="false" />
+            <element signature="e#28264#29000#0" expanded="false" />
+            <element signature="e#29169#29978#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dist/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="17" lean-forward="false" selection-start-line="0" selection-start-column="17" selection-end-line="0" selection-end-column="17" />
+          <folding />
         </state>
       </provider>
     </entry>
