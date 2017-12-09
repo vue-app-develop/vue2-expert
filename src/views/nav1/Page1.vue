@@ -131,8 +131,18 @@
                     </el-input>
                 </el-form-item>
                 <el-form-item>
-                    <span>选择文件：</span><input id="txt_filePath" type="text" readonly="readonly"/>
-                    <a class="file"><input id="btnfile" name="btnfile" type="file" v-on:click="ajaxFileUpload"/>浏览</a>
+                    <el-upload
+                            class="upload-demo"
+                            ref="upload"
+                            action="../../Handlers/UploadHandler.ashx"
+                            :on-preview="handlePreview"
+                            :on-remove="handleRemove"
+                            :file-list="fileList"
+                            :auto-upload="false">
+                        <el-button slot="trigger" size="small" type="primary">选取文件</el-button>
+                        <el-button style="margin-left: 10px;" size="small" type="success" @click="submitUpload">上传到服务器</el-button>
+                        <div slot="tip" class="el-upload__tip">只能上传jpg/png文件，且不超过500kb</div>
+                    </el-upload>
                 </el-form-item>
             </el-form>
             <div slot="footer" class="dialog-footer">
