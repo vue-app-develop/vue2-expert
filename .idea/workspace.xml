@@ -2,8 +2,134 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4b5e382c-d06f-421d-824b-42eadee674ab" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/views/nav1/Page1.vue" afterPath="$PROJECT_DIR$/src/views/nav1/Page1.vue" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/node_modules/node-sass/bin/node-sass" afterPath="$PROJECT_DIR$/node_modules/node-sass/bin/node-sass" />
+      <change beforePath="$PROJECT_DIR$/node_modules/node-sass/build/Makefile" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/node-sass/build/Release/.deps/Release/binding.node.d" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/node-sass/build/Release/.deps/Release/obj.target/binding/src/binding.o.d" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/node-sass/build/Release/.deps/Release/obj.target/binding/src/create_string.o.d" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/node-sass/build/Release/.deps/Release/obj.target/binding/src/custom_function_bridge.o.d" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/node-sass/build/Release/.deps/Release/obj.target/binding/src/custom_importer_bridge.o.d" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/node-sass/build/Release/.deps/Release/obj.target/binding/src/sass_context_wrapper.o.d" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/node-sass/build/Release/.deps/Release/obj.target/binding/src/sass_types/boolean.o.d" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/node-sass/build/Release/.deps/Release/obj.target/binding/src/sass_types/color.o.d" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/node-sass/build/Release/.deps/Release/obj.target/binding/src/sass_types/error.o.d" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/node-sass/build/Release/.deps/Release/obj.target/binding/src/sass_types/factory.o.d" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/node-sass/build/Release/.deps/Release/obj.target/binding/src/sass_types/list.o.d" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/node-sass/build/Release/.deps/Release/obj.target/binding/src/sass_types/map.o.d" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/node-sass/build/Release/.deps/Release/obj.target/binding/src/sass_types/null.o.d" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/node-sass/build/Release/.deps/Release/obj.target/binding/src/sass_types/number.o.d" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/node-sass/build/Release/.deps/Release/obj.target/binding/src/sass_types/string.o.d" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/node-sass/build/Release/.deps/Release/obj.target/libsass/src/libsass/src/ast.o.d" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/node-sass/build/Release/.deps/Release/obj.target/libsass/src/libsass/src/ast_fwd_decl.o.d" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/node-sass/build/Release/.deps/Release/obj.target/libsass/src/libsass/src/base64vlq.o.d" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/node-sass/build/Release/.deps/Release/obj.target/libsass/src/libsass/src/bind.o.d" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/node-sass/build/Release/.deps/Release/obj.target/libsass/src/libsass/src/cencode.o.d" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/node-sass/build/Release/.deps/Release/obj.target/libsass/src/libsass/src/check_nesting.o.d" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/node-sass/build/Release/.deps/Release/obj.target/libsass/src/libsass/src/color_maps.o.d" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/node-sass/build/Release/.deps/Release/obj.target/libsass/src/libsass/src/constants.o.d" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/node-sass/build/Release/.deps/Release/obj.target/libsass/src/libsass/src/context.o.d" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/node-sass/build/Release/.deps/Release/obj.target/libsass/src/libsass/src/cssize.o.d" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/node-sass/build/Release/.deps/Release/obj.target/libsass/src/libsass/src/emitter.o.d" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/node-sass/build/Release/.deps/Release/obj.target/libsass/src/libsass/src/environment.o.d" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/node-sass/build/Release/.deps/Release/obj.target/libsass/src/libsass/src/error_handling.o.d" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/node-sass/build/Release/.deps/Release/obj.target/libsass/src/libsass/src/eval.o.d" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/node-sass/build/Release/.deps/Release/obj.target/libsass/src/libsass/src/expand.o.d" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/node-sass/build/Release/.deps/Release/obj.target/libsass/src/libsass/src/extend.o.d" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/node-sass/build/Release/.deps/Release/obj.target/libsass/src/libsass/src/file.o.d" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/node-sass/build/Release/.deps/Release/obj.target/libsass/src/libsass/src/functions.o.d" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/node-sass/build/Release/.deps/Release/obj.target/libsass/src/libsass/src/inspect.o.d" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/node-sass/build/Release/.deps/Release/obj.target/libsass/src/libsass/src/json.o.d" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/node-sass/build/Release/.deps/Release/obj.target/libsass/src/libsass/src/lexer.o.d" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/node-sass/build/Release/.deps/Release/obj.target/libsass/src/libsass/src/listize.o.d" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/node-sass/build/Release/.deps/Release/obj.target/libsass/src/libsass/src/memory/SharedPtr.o.d" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/node-sass/build/Release/.deps/Release/obj.target/libsass/src/libsass/src/node.o.d" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/node-sass/build/Release/.deps/Release/obj.target/libsass/src/libsass/src/output.o.d" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/node-sass/build/Release/.deps/Release/obj.target/libsass/src/libsass/src/parser.o.d" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/node-sass/build/Release/.deps/Release/obj.target/libsass/src/libsass/src/plugins.o.d" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/node-sass/build/Release/.deps/Release/obj.target/libsass/src/libsass/src/position.o.d" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/node-sass/build/Release/.deps/Release/obj.target/libsass/src/libsass/src/prelexer.o.d" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/node-sass/build/Release/.deps/Release/obj.target/libsass/src/libsass/src/remove_placeholders.o.d" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/node-sass/build/Release/.deps/Release/obj.target/libsass/src/libsass/src/sass.o.d" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/node-sass/build/Release/.deps/Release/obj.target/libsass/src/libsass/src/sass2scss.o.d" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/node-sass/build/Release/.deps/Release/obj.target/libsass/src/libsass/src/sass_context.o.d" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/node-sass/build/Release/.deps/Release/obj.target/libsass/src/libsass/src/sass_functions.o.d" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/node-sass/build/Release/.deps/Release/obj.target/libsass/src/libsass/src/sass_util.o.d" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/node-sass/build/Release/.deps/Release/obj.target/libsass/src/libsass/src/sass_values.o.d" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/node-sass/build/Release/.deps/Release/obj.target/libsass/src/libsass/src/source_map.o.d" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/node-sass/build/Release/.deps/Release/obj.target/libsass/src/libsass/src/subset_map.o.d" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/node-sass/build/Release/.deps/Release/obj.target/libsass/src/libsass/src/to_c.o.d" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/node-sass/build/Release/.deps/Release/obj.target/libsass/src/libsass/src/to_value.o.d" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/node-sass/build/Release/.deps/Release/obj.target/libsass/src/libsass/src/units.o.d" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/node-sass/build/Release/.deps/Release/obj.target/libsass/src/libsass/src/utf8_string.o.d" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/node-sass/build/Release/.deps/Release/obj.target/libsass/src/libsass/src/util.o.d" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/node-sass/build/Release/.deps/Release/obj.target/libsass/src/libsass/src/values.o.d" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/node-sass/build/Release/.deps/Release/sass.a.d" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/node-sass/build/Release/obj.target/binding/src/binding.o" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/node-sass/build/Release/obj.target/binding/src/create_string.o" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/node-sass/build/Release/obj.target/binding/src/custom_function_bridge.o" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/node-sass/build/Release/obj.target/binding/src/custom_importer_bridge.o" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/node-sass/build/Release/obj.target/binding/src/sass_context_wrapper.o" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/node-sass/build/Release/obj.target/binding/src/sass_types/boolean.o" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/node-sass/build/Release/obj.target/binding/src/sass_types/color.o" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/node-sass/build/Release/obj.target/binding/src/sass_types/error.o" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/node-sass/build/Release/obj.target/binding/src/sass_types/factory.o" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/node-sass/build/Release/obj.target/binding/src/sass_types/list.o" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/node-sass/build/Release/obj.target/binding/src/sass_types/map.o" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/node-sass/build/Release/obj.target/binding/src/sass_types/null.o" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/node-sass/build/Release/obj.target/binding/src/sass_types/number.o" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/node-sass/build/Release/obj.target/binding/src/sass_types/string.o" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/node-sass/build/Release/obj.target/libsass/src/libsass/src/ast.o" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/node-sass/build/Release/obj.target/libsass/src/libsass/src/ast_fwd_decl.o" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/node-sass/build/Release/obj.target/libsass/src/libsass/src/base64vlq.o" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/node-sass/build/Release/obj.target/libsass/src/libsass/src/bind.o" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/node-sass/build/Release/obj.target/libsass/src/libsass/src/cencode.o" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/node-sass/build/Release/obj.target/libsass/src/libsass/src/check_nesting.o" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/node-sass/build/Release/obj.target/libsass/src/libsass/src/color_maps.o" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/node-sass/build/Release/obj.target/libsass/src/libsass/src/constants.o" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/node-sass/build/Release/obj.target/libsass/src/libsass/src/context.o" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/node-sass/build/Release/obj.target/libsass/src/libsass/src/cssize.o" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/node-sass/build/Release/obj.target/libsass/src/libsass/src/emitter.o" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/node-sass/build/Release/obj.target/libsass/src/libsass/src/environment.o" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/node-sass/build/Release/obj.target/libsass/src/libsass/src/error_handling.o" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/node-sass/build/Release/obj.target/libsass/src/libsass/src/eval.o" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/node-sass/build/Release/obj.target/libsass/src/libsass/src/expand.o" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/node-sass/build/Release/obj.target/libsass/src/libsass/src/extend.o" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/node-sass/build/Release/obj.target/libsass/src/libsass/src/file.o" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/node-sass/build/Release/obj.target/libsass/src/libsass/src/functions.o" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/node-sass/build/Release/obj.target/libsass/src/libsass/src/inspect.o" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/node-sass/build/Release/obj.target/libsass/src/libsass/src/json.o" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/node-sass/build/Release/obj.target/libsass/src/libsass/src/lexer.o" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/node-sass/build/Release/obj.target/libsass/src/libsass/src/listize.o" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/node-sass/build/Release/obj.target/libsass/src/libsass/src/memory/SharedPtr.o" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/node-sass/build/Release/obj.target/libsass/src/libsass/src/node.o" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/node-sass/build/Release/obj.target/libsass/src/libsass/src/output.o" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/node-sass/build/Release/obj.target/libsass/src/libsass/src/parser.o" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/node-sass/build/Release/obj.target/libsass/src/libsass/src/plugins.o" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/node-sass/build/Release/obj.target/libsass/src/libsass/src/position.o" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/node-sass/build/Release/obj.target/libsass/src/libsass/src/prelexer.o" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/node-sass/build/Release/obj.target/libsass/src/libsass/src/remove_placeholders.o" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/node-sass/build/Release/obj.target/libsass/src/libsass/src/sass.o" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/node-sass/build/Release/obj.target/libsass/src/libsass/src/sass2scss.o" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/node-sass/build/Release/obj.target/libsass/src/libsass/src/sass_context.o" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/node-sass/build/Release/obj.target/libsass/src/libsass/src/sass_functions.o" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/node-sass/build/Release/obj.target/libsass/src/libsass/src/sass_util.o" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/node-sass/build/Release/obj.target/libsass/src/libsass/src/sass_values.o" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/node-sass/build/Release/obj.target/libsass/src/libsass/src/source_map.o" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/node-sass/build/Release/obj.target/libsass/src/libsass/src/subset_map.o" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/node-sass/build/Release/obj.target/libsass/src/libsass/src/to_c.o" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/node-sass/build/Release/obj.target/libsass/src/libsass/src/to_value.o" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/node-sass/build/Release/obj.target/libsass/src/libsass/src/units.o" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/node-sass/build/Release/obj.target/libsass/src/libsass/src/utf8_string.o" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/node-sass/build/Release/obj.target/libsass/src/libsass/src/util.o" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/node-sass/build/Release/obj.target/libsass/src/libsass/src/values.o" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/node-sass/build/Release/sass.a" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/node-sass/build/binding.Makefile" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/node-sass/build/binding.target.mk" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/node-sass/build/config.gypi" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/node-sass/build/gyp-mac-tool" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/node-sass/build/src/libsass.Makefile" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/node_modules/node-sass/build/src/libsass.target.mk" afterPath="" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -15,7 +141,6 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file leaf-file-name="Page1.vue" pinned="false" current-in-tab="true">
@@ -126,11 +251,11 @@
   <component name="NodeModulesDirectoryManager">
     <handled-path value="$PROJECT_DIR$/node_modules" />
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
-    <option name="width" value="1936" />
-    <option name="height" value="1056" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="2" />
+    <option name="y" value="1" />
+    <option name="width" value="1022" />
+    <option name="height" value="726" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -147,98 +272,13 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="ProjectPane">
-        <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="vue2-expert" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="vue2-expert" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="vue2-expert" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="vue2-expert" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="vue2-expert" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="vue2-expert" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="vuex" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="vue2-expert" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="vue2-expert" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="vue2-expert" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="vue2-expert" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="nav1" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
       <pane id="Scope" />
       <pane id="Scratches" />
+      <pane id="ProjectPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="nodejs_interpreter_path" value="/usr/local/bin/node" />
+    <property name="nodejs_interpreter_path" value="node" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
@@ -263,7 +303,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="npm.start">
+  <component name="RunManager">
     <configuration default="true" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
       <method />
     </configuration>
@@ -301,15 +341,6 @@
       <option name="filePath" />
       <method />
     </configuration>
-    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
-      <node-interpreter>project</node-interpreter>
-      <node-options />
-      <gulpfile />
-      <tasks />
-      <arguments />
-      <envs />
-      <method />
-    </configuration>
     <configuration default="true" type="js.build_tools.npm" factoryName="npm">
       <command value="run" />
       <scripts />
@@ -330,7 +361,15 @@
       <recursive>false</recursive>
       <method />
     </configuration>
-    <configuration default="false" name="start" type="js.build_tools.npm" factoryName="npm">
+    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <gulpfile />
+      <tasks />
+      <arguments />
+      <envs />
+    </configuration>
+    <configuration name="start" type="js.build_tools.npm" factoryName="npm">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
       <scripts>
@@ -338,14 +377,13 @@
       </scripts>
       <node-interpreter value="C:/Program Files/nodejs/node" />
       <envs />
-      <method />
     </configuration>
-    <list size="1">
-      <item index="0" class="java.lang.String" itemvalue="npm.start" />
-    </list>
   </component>
   <component name="ShelveChangesManager" show_recycled="false">
     <option name="remove_strategy" value="false" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -364,26 +402,29 @@
       <workItem from="1512033326164" duration="1020000" />
       <workItem from="1512040635622" duration="3899000" />
       <workItem from="1512202192338" duration="4698000" />
+      <workItem from="1512616099672" duration="639000" />
+      <workItem from="1512778542347" duration="180000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="48990000" />
+    <option name="totallyTimeSpent" value="49809000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1392405" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1390625" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3347413" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21919303" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.27153763" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.27138332" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -394,7 +435,7 @@
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="processedProjectFiles" value="true" />
+    <option name="version" value="1" />
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
@@ -406,6 +447,62 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/views/nav1/Page1.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="n#style#0;n#el-select#0;n#el-form-item#1;n#el-form#0;n#el-dialog#0;n#section#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#el-form-item#2;n#el-form#0;n#el-dialog#0;n#section#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#el-form-item#3;n#el-form#0;n#el-dialog#0;n#section#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#el-button#1;n#el-upload#0;n#el-form-item#6;n#el-form#0;n#el-dialog#0;n#section#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#el-select#0;n#el-form-item#1;n#el-form#0;n#el-dialog#1;n#section#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#el-checkbox#0;n#el-form#0;n#el-dialog#1;n#section#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#el-select#0;n#el-form-item#1;n#el-form#0;n#el-dialog#2;n#section#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#el-checkbox#0;n#el-form#0;n#el-dialog#2;n#section#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="e#14450#14767#0" expanded="false" />
+            <element signature="e#15246#15699#0" expanded="false" />
+            <element signature="e#18190#18289#0" expanded="false" />
+            <element signature="e#18348#18446#0" expanded="false" />
+            <element signature="e#18490#18542#0" expanded="false" />
+            <element signature="e#18603#20180#0" expanded="false" />
+            <element signature="e#25546#26151#0" expanded="false" />
+            <element signature="e#27574#28182#0" expanded="false" />
+            <element signature="e#28446#28954#0" expanded="false" />
+            <element signature="e#29019#29755#0" expanded="false" />
+            <element signature="e#29924#30733#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/views/nav1/Page1.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="n#style#0;n#el-select#0;n#el-form-item#1;n#el-form#0;n#el-dialog#0;n#section#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#el-form-item#2;n#el-form#0;n#el-dialog#0;n#section#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#el-form-item#3;n#el-form#0;n#el-dialog#0;n#section#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#el-button#1;n#el-upload#0;n#el-form-item#6;n#el-form#0;n#el-dialog#0;n#section#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#el-select#0;n#el-form-item#1;n#el-form#0;n#el-dialog#1;n#section#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#el-checkbox#0;n#el-form#0;n#el-dialog#1;n#section#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#el-select#0;n#el-form-item#1;n#el-form#0;n#el-dialog#2;n#section#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#el-checkbox#0;n#el-form#0;n#el-dialog#2;n#section#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="e#14450#14767#0" expanded="false" />
+            <element signature="e#15246#15699#0" expanded="false" />
+            <element signature="e#18190#18289#0" expanded="false" />
+            <element signature="e#18348#18446#0" expanded="false" />
+            <element signature="e#18490#18542#0" expanded="false" />
+            <element signature="e#18603#20180#0" expanded="false" />
+            <element signature="e#25546#26151#0" expanded="false" />
+            <element signature="e#27574#28182#0" expanded="false" />
+            <element signature="e#28446#28954#0" expanded="false" />
+            <element signature="e#29019#29755#0" expanded="false" />
+            <element signature="e#29924#30733#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/views/nav1/Page1.vue">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
