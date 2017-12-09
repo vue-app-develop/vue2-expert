@@ -131,24 +131,9 @@
                     </el-input>
                 </el-form-item>
                 <el-form-item>
-                    <el-upload
-                            class="upload-demo"
-                            ref="upload"
-                            action="https://jsonplaceholder.typicode.com/posts/"
-                            :on-preview="handlePreview"
-                            :on-remove="handleRemove"
-                            :file-list="fileList"
-                            multiple
-                            :auto-upload="false">
-                        <el-button slot="trigger" size="small" type="primary">选取文件</el-button>
-                        <el-button style="margin-left: 10px;" size="small" type="success" @click="submitUpload">上传到服务器
-                        </el-button>
-                        <div slot="tip" class="el-upload__tip">只能上传jpg/png文件，且不超过500kb</div>
-                    </el-upload>
+                    <span>选择文件：</span><input id="txt_filePath" type="text" readonly="readonly"/>
+                    <a class="file"><input id="btnfile" name="btnfile" type="file" v-on:click="ajaxFileUpload"/>浏览</a>
                 </el-form-item>
-                <!--<el-form-item>-->
-                <!--<Upload v-model="addForm.image_uri"></Upload>-->
-                <!--</el-form-item>-->
             </el-form>
             <div slot="footer" class="dialog-footer">
                 <el-button @click.native="addFormVisible = false">取消</el-button>
@@ -723,6 +708,29 @@
             },
             handlePreview(file) {
                 console.log(file);
+            },
+            ajaxFileUpload(){
+                $(".file").on("change", "input[type='file']", function () {
+                    var filePath = $(this).val();
+                    //设置上传文件类型
+
+                    //上传文件
+                    $.ajaxFileUpload({
+                        url: '../../Handlers/UploadHandler.ashx',
+                        secureuri: false,
+                        fileElementId: 'btnfile',
+                        dataType: 'jsonp',
+                        success: function (data, status) {
+                            //获取上传文件路径
+                            $("#txt_filePath").val(data.filenewname);
+                            alert("文件上传成功！");
+                        },
+                        error: function (data, status, e) {
+                            alert(e);
+                        }
+                    });
+
+                });
             }
         },
         mounted() {
@@ -739,20 +747,30 @@
         background-color: #f8f8f8 !important;
     }
 
-    /*.el-tag + .el-tag {*/
-    /*margin-left: 10px;*/
-    /*}*/
-    /*.button-new-tag {*/
-    /*margin-left: 10px;*/
-    /*height: 32px;*/
-    /*line-height: 30px;*/
-    /*padding-top: 0;*/
-    /*padding-bottom: 0;*/
-    /*}*/
-    /*.input-new-tag {*/
-    /*width: 90px;*/
-    /*margin-left: 10px;*/
-    /*vertical-align: bottom;*/
-    /*}*/
+    .file{
+        position: relative;
+        background-color: #b32b1b;
+        border: 1px solid #ddd;
+        width: 68px;
+        height: 25px;
+        display: inline-block;
+        text-decoration: none;
+        text-indent: 0;
+        line-height: 25px;
+        font-size: 14px;
+        color: #fff;
+        margin: 0 auto;
+        cursor: pointer;
+        text-align: center;
+        border: none;
+        border-radius: 3px;
+    }
+    .file input{
+        position: absolute;
+        top: 0;
+        left: -2px;
+        opacity: 0;
+        width: 78px;
+    }
 
 </style>
