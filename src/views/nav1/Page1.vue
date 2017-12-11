@@ -134,14 +134,18 @@
                     <el-upload
                             class="upload-demo"
                             ref="upload"
-                            action="../../Handlers/UploadHandler.ashx"
+                            action="../Handlers/UploadHandler.ashx"
                             :on-preview="handlePreview"
+                            :on-exceed="handleExceed"
                             :on-remove="handleRemove"
+                            :on-success="handleSuccess"
                             :file-list="fileList"
+                            :limit="3"
                             :auto-upload="false"
-                             multiple>
+                            multiple>
                         <el-button slot="trigger" size="small" type="primary">选取文件</el-button>
-                        <el-button style="margin-left: 10px;" size="small" type="success" @click="submitUpload">上传到服务器</el-button>
+                        <el-button style="margin-left: 10px;" size="small" type="success" @click="submitUpload">上传到服务器
+                        </el-button>
                         <div slot="tip" class="el-upload__tip">只能上传jpg/png文件，且不超过500kb</div>
                     </el-upload>
                 </el-form-item>
@@ -188,7 +192,8 @@
                     <el-input v-model="editForm.keyWord" placeholder="请输入关键词" auto-complete="off"></el-input>
                     (多个关键字之间用“,”分隔)
                 </el-form-item>
-                <el-checkbox v-model="editForm.isVerified" style="margin-left: 100px;margin-bottom: 20px;">是否验证</el-checkbox>
+                <el-checkbox v-model="editForm.isVerified" style="margin-left: 100px;margin-bottom: 20px;">是否验证
+                </el-checkbox>
                 <el-form-item label="备注" prop="remark" style="width: 450px;">
                     <el-input
                             type="textarea"
@@ -243,7 +248,9 @@
                 <el-form-item label="关键词" style="width: 450px;">
                     <el-input :readonly="true" v-model="detailForm.keyWord" auto-complete="off"></el-input>
                 </el-form-item>
-                <el-checkbox :disabled="true" v-model="detailForm.isVerified" style="margin-left: 100px;margin-bottom: 20px;">是否验证</el-checkbox>
+                <el-checkbox :disabled="true" v-model="detailForm.isVerified"
+                             style="margin-left: 100px;margin-bottom: 20px;">是否验证
+                </el-checkbox>
                 <el-form-item label="备注" prop="remark" style="width: 450px;">
                     <el-input
                             :readonly="true"
@@ -402,7 +409,7 @@
             },
 
             //刷新
-            on_refresh(){
+            on_refresh() {
                 this.getKnowledge();
             },
 
@@ -436,8 +443,10 @@
                                     label: item.EquipmentCategoryName,
                                     value: parseInt(item.EquipmentCategoryId)
                                 });
+                                _this.filters.equipmentCategory = _this.categorySource[0].value;
                             }
                         }
+                        _this.getKnowledge();
                     }
                 });
             },
@@ -500,9 +509,9 @@
                                 item.solution = know.Solution;
                                 item.equipmentCategory = know.EquipmentCategory;
                                 item.remark = know.Remark;
-                                if(know.IsVerified == '1') {
+                                if (know.IsVerified == '1') {
                                     item.isVerified = true;
-                                }else {
+                                } else {
                                     item.isVerified = false;
                                 }
                                 item.cTime = know.CreateTime;
@@ -526,17 +535,17 @@
             handleAdd: function () {
                 this.addFormVisible = true;
                 this.dynamicTags.push(new Date().toLocaleString());
-                this.addForm = {
-                    knowledgeTitle: '',
-                    keyWord: '',
-                    problem: '',
-                    solution: '',
-                    equipmentCategory: '',
-                    baseTypeId: '',
-                    remark: '',
-                    createUser: '',
-                    accessoryKey: ''
-                };
+                // this.addForm = {
+                //     knowledgeTitle: '',
+                //     keyWord: '',
+                //     problem: '',
+                //     solution: '',
+                //     equipmentCategory: '',
+                //     baseTypeId: '',
+                //     remark: '',
+                //     createUser: '',
+                //     accessoryKey: ''
+                // };
             },
 
             //新增
@@ -547,6 +556,7 @@
                             this.addLoading = true;
                             //NProgress.start();
                             let para = Object.assign({}, this.addForm);
+                            para.createUser = localStorage.getItem('loginUser').name;
                             $.ajax({
                                 async: true,
                                 type: 'GET',
@@ -596,9 +606,9 @@
                             this.editLoading = true;
                             //NProgress.start();
                             let para = Object.assign({}, this.editForm);
-                            if(para.isVerified){
+                            if (para.isVerified) {
                                 para.isVerified = 1;
-                            }else{
+                            } else {
                                 para.isVerified = 0;
                             }
                             $.ajax({
@@ -715,39 +725,43 @@
                 this.$refs.upload.submit();
             },
             handleRemove(file, fileList) {
-                console.log(file, fileList);
+                console.log('handleRemove file: ' + file);
+                console.log('handleRemove fileList: ' + fileList);
             },
             handlePreview(file) {
-                console.log('handlePreview: ' + file);
-
+                console.log('handlePreview file: ' + file);
             },
-            ajaxFileUpload(){
-                $(".file").on("change", "input[type='file']", function () {
-                    var filePath = $(this).val();
-                    //设置上传文件类型
-
-                    //上传文件
-                    $.ajaxFileUpload({
-                        url: '../../Handlers/UploadHandler.ashx',
-                        secureuri: false,
-                        fileElementId: 'btnfile',
-                        dataType: 'jsonp',
-                        success: function (data, status) {
-                            //获取上传文件路径
-                            $("#txt_filePath").val(data.filenewname);
-                            alert("文件上传成功！");
-                        },
-                        error: function (data, status, e) {
-                            alert(e);
-                        }
-                    });
-
-                });
+            handleExceed(files, fileList) {
+                this.$message.warning(`当前限制选择 3 个文件，本次选择了 ${files.length} 个文件，共选择了 ${files.length + fileList.length} 个文件`);
+            },
+            handleSuccess(response, file, fileList) {
+                console.log('handleSuccess response: ' + response);
+                console.log('handleSuccess file: ' + file);
+                console.log('handleSuccess fileList: ' + fileList);
+                this.addForm.accessoryKey = response;
             }
         },
         mounted() {
             this.getEquipmentCategories();
             this.getKnowledge();
+            this.addForm = {
+                knowledgeTitle: '',
+                keyWord: '',
+                problem: '',
+                solution: '',
+                equipmentCategory: '',
+                baseTypeId: '',
+                remark: '',
+                createUser: '',
+                accessoryKey: ''
+            };
+            let eventName = this.getQueryString('eventName');
+            if (eventName) {
+                this.addForm.knowledgeTitle = eventName;
+                alert(eventName);
+                this.addForm.equipmentCategory = parseInt(this.getQueryString('equipmentCategory').trim());
+                this.handleAdd();
+            }
         }
     }
 
@@ -757,32 +771,6 @@
 
     .toolbar {
         background-color: #f8f8f8 !important;
-    }
-
-    .file{
-        position: relative;
-        background-color: #b32b1b;
-        border: 1px solid #ddd;
-        width: 68px;
-        height: 25px;
-        display: inline-block;
-        text-decoration: none;
-        text-indent: 0;
-        line-height: 25px;
-        font-size: 14px;
-        color: #fff;
-        margin: 0 auto;
-        cursor: pointer;
-        text-align: center;
-        border: none;
-        border-radius: 3px;
-    }
-    .file input{
-        position: absolute;
-        top: 0;
-        left: -2px;
-        opacity: 0;
-        width: 78px;
     }
 
 </style>
