@@ -203,7 +203,23 @@
                     </el-input>
                 </el-form-item>
                 <el-form-item>
-                    <Upload v-model="editForm.image_uri"></Upload>
+                    <el-upload
+                            class="upload-demo"
+                            ref="upload"
+                            action="../Handlers/UploadHandler.ashx"
+                            :on-preview="handlePreview"
+                            :on-exceed="handleExceed"
+                            :on-remove="handleRemove"
+                            :on-success="handleSuccess"
+                            :file-list="fileList"
+                            :limit="3"
+                            :auto-upload="false"
+                            multiple>
+                        <el-button slot="trigger" size="small" type="primary">选取文件</el-button>
+                        <el-button style="margin-left: 10px;" size="small" type="success" @click="submitUpload">上传到服务器
+                        </el-button>
+                        <div slot="tip" class="el-upload__tip">只能上传jpg/png文件，且不超过500kb</div>
+                    </el-upload>
                 </el-form-item>
             </el-form>
             <div slot="footer" class="dialog-footer">
@@ -396,6 +412,12 @@
             }
         },
         methods: {
+            //获取浏览器参数
+            getQueryString(name) {
+                var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
+                var r = window.location.search.substr(1).match(reg);
+                if (r != null) return (r[2]); return null;
+            },
             //操作分页
             handleSizeChange(val) {
                 this.listQuery.pageSize = val;
@@ -535,6 +557,7 @@
             handleAdd: function () {
                 this.addFormVisible = true;
                 this.dynamicTags.push(new Date().toLocaleString());
+                this.fileList = [];
                 // this.addForm = {
                 //     knowledgeTitle: '',
                 //     keyWord: '',
@@ -596,6 +619,11 @@
             handleEdit: function (index, row) {
                 this.editFormVisible = true;
                 this.editForm = Object.assign({}, row);
+                let imgs = new Array();
+                imgs = this.editForm.accessoryKeystr.split(",");
+                for (i=0; i<imgs.length; i++ ){
+                    this.fileList.push({name: imgs[i], url:window.location.host + '/Upload/' + imgs[i]}); //分割后的字符输出
+                }
             },
 
             //编辑
