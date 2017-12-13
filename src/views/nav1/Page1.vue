@@ -276,6 +276,11 @@
                             v-model="detailForm.remark">
                     </el-input>
                 </el-form-item>
+                <el-form-item label="附件" style="width: 450px;">
+                    <div v-for="item of fileList">
+                        <img src="item.url">
+                    </div>
+                </el-form-item>
             </el-form>
         </el-dialog>
     </section>
