@@ -134,7 +134,7 @@
                     <el-upload
                             class="upload-demo"
                             ref="upload"
-                            action="../Handlers/UploadHandler.ashx"
+                            action="../../Handlers/UploadHandler.ashx"
                             :on-preview="handlePreview"
                             :on-exceed="handleExceed"
                             :on-remove="handleRemove"
@@ -206,7 +206,7 @@
                     <el-upload
                             class="upload-demo"
                             ref="upload"
-                            action="../Handlers/UploadHandler.ashx"
+                            action="../../Handlers/UploadHandler.ashx"
                             :on-preview="handlePreview"
                             :on-exceed="handleExceed"
                             :on-remove="handleRemove"
@@ -277,8 +277,10 @@
                     </el-input>
                 </el-form-item>
                 <el-form-item label="附件" style="width: 450px;">
-                    <div v-for="item of fileList">
-                        <img src="item.url">
+                    <div v-for="item in fileList">
+                        <a v-bind:href="item.url" target="_blank">
+                            <img v-bind:src="item.url" alt="附件"
+                                 style="width: 80px;height: 60px"></a>
                     </div>
                 </el-form-item>
             </el-form>
@@ -421,7 +423,8 @@
             getQueryString(name) {
                 var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
                 var r = window.location.search.substr(1).match(reg);
-                if (r != null) return (r[2]); return null;
+                if (r != null) return (r[2]);
+                return null;
             },
             //操作分页
             handleSizeChange(val) {
@@ -536,6 +539,7 @@
                                 item.solution = know.Solution;
                                 item.equipmentCategory = know.EquipmentCategory;
                                 item.remark = know.Remark;
+                                item.accessoryKey = know.AccessoryKey;
                                 if (know.IsVerified == '1') {
                                     item.isVerified = true;
                                 } else {
@@ -584,7 +588,11 @@
                             this.addLoading = true;
                             //NProgress.start();
                             let para = Object.assign({}, this.addForm);
-                            para.createUser = localStorage.getItem('loginUser').name;
+                            alert('this.addForm.accessoryKey' + this.addForm.accessoryKey);
+                            para.createUser = 'admin';//localStorage.getItem('loginUser').name;
+                            alert('this.fileList.length' + this.fileList.length);
+                            alert(para.accessoryKey);
+                            alert(para.accessoryKey);
                             $.ajax({
                                 async: true,
                                 type: 'GET',
@@ -622,12 +630,13 @@
 
             //显示编辑界面
             handleEdit: function (index, row) {
+                this.fileList = [];
                 this.editFormVisible = true;
                 this.editForm = Object.assign({}, row);
                 let imgs = new Array();
-                imgs = this.editForm.accessoryKeystr.split(",");
-                for (i=0; i<imgs.length; i++ ){
-                    this.fileList.push({name: imgs[i], url:window.location.host + '/Upload/' + imgs[i]}); //分割后的字符输出
+                imgs = this.editForm.accessoryKey.split(",");
+                for (var i = 0; i < imgs.length; i++) {
+                    this.fileList.push({name: imgs[i], url: window.location.host + '/Upload/' + imgs[i]}); //分割后的字符输出
                 }
             },
 
@@ -681,8 +690,14 @@
 
             //显示详情界面
             handleDetail: function (index, row) {
+                this.fileList = [];
                 this.detailFormVisible = true;
                 this.detailForm = Object.assign({}, row);
+                let imgs = new Array();
+                imgs = this.detailForm.accessoryKey.split(",");
+                for (var i = 0; i < imgs.length; i++) {
+                    this.fileList.push({name: imgs[i], url: 'http://' + window.location.host + '/Upload/' + imgs[i]}); //分割后的字符输出
+                }
             },
 
             //删除结果
@@ -758,8 +773,24 @@
                 this.$refs.upload.submit();
             },
             handleRemove(file, fileList) {
-                console.log('handleRemove file: ' + file);
-                console.log('handleRemove fileList: ' + fileList);
+
+                console.log('handleRemove file: ' + file.name);
+                console.log('handleRemove fileList: ' + fileList.length);
+                this.editForm.accessoryKey = '';
+                for (var i = 0; i < fileList.length; i++) {
+                    if (this.editForm.accessoryKey === '') {
+                        this.editForm.accessoryKey = fileList[i].name;
+                    }
+                    else {
+                        this.editForm.accessoryKey = this.editForm.accessoryKey + ',' + fileList[i].name;
+                    }
+                    if (this.addForm.accessoryKey === '') {
+                        this.addForm.accessoryKey = fileList[i].name;
+                    }
+                    else {
+                        this.addForm.accessoryKey = this.addForm.accessoryKey + ',' + fileList[i].name;
+                    }
+                }
             },
             handlePreview(file) {
                 console.log('handlePreview file: ' + file);
@@ -771,7 +802,19 @@
                 console.log('handleSuccess response: ' + response);
                 console.log('handleSuccess file: ' + file);
                 console.log('handleSuccess fileList: ' + fileList);
-                this.addForm.accessoryKey = response;
+                if (this.addForm.accessoryKey) {
+                    this.addForm.accessoryKey += ',' + response;
+                }
+                else {
+                    this.addForm.accessoryKey = response;
+                }
+                ////////////////////
+                if (this.editForm.accessoryKey) {
+                    this.editForm.accessoryKey += ',' + response;
+                }
+                else {
+                    this.editForm.accessoryKey = response;
+                }
             }
         },
         mounted() {
@@ -791,7 +834,6 @@
             let eventName = this.getQueryString('eventName');
             if (eventName) {
                 this.addForm.knowledgeTitle = eventName;
-                alert(eventName);
                 this.addForm.equipmentCategory = parseInt(this.getQueryString('equipmentCategory').trim());
                 this.handleAdd();
             }
