@@ -134,7 +134,7 @@
                     <el-upload
                             class="upload-demo"
                             ref="upload"
-                            action="../../Handlers/UploadHandler.ashx"
+                            action="../Handlers/UploadHandler.ashx"
                             :on-preview="handlePreview"
                             :on-exceed="handleExceed"
                             :on-remove="handleRemove"
@@ -206,7 +206,7 @@
                     <el-upload
                             class="upload-demo"
                             ref="upload"
-                            action="../../Handlers/UploadHandler.ashx"
+                            action="../Handlers/UploadHandler.ashx"
                             :on-preview="handlePreview"
                             :on-exceed="handleExceed"
                             :on-remove="handleRemove"
@@ -278,9 +278,8 @@
                 </el-form-item>
                 <el-form-item label="附件" style="width: 450px;">
                     <div v-for="item in fileList">
-                        <a v-bind:href="item.url" target="_blank">
-                            <img v-bind:src="item.url" alt="附件"
-                                 style="width: 80px;height: 60px"></a>
+                        <a v-bind:href="item.url" target="_blank"><img v-bind:src="item.url" alt="附件"
+                                                                       style="width: 80px;height: 60px"></a>
                     </div>
                 </el-form-item>
             </el-form>
@@ -588,11 +587,11 @@
                             this.addLoading = true;
                             //NProgress.start();
                             let para = Object.assign({}, this.addForm);
-                            alert('this.addForm.accessoryKey' + this.addForm.accessoryKey);
-                            para.createUser = 'admin';//localStorage.getItem('loginUser').name;
-                            alert('this.fileList.length' + this.fileList.length);
-                            alert(para.accessoryKey);
-                            alert(para.accessoryKey);
+                            //alert('this.addForm.accessoryKey' + this.addForm.accessoryKey);
+                            para.createUser = localStorage.getItem('loginUser').name;
+                            //alert('this.fileList.length' + this.fileList.length);
+                            //alert(para.accessoryKey);
+                            //alert(para.accessoryKey);
                             $.ajax({
                                 async: true,
                                 type: 'GET',
@@ -636,7 +635,7 @@
                 let imgs = new Array();
                 imgs = this.editForm.accessoryKey.split(",");
                 for (var i = 0; i < imgs.length; i++) {
-                    this.fileList.push({name: imgs[i], url: window.location.host + '/Upload/' + imgs[i]}); //分割后的字符输出
+                    this.fileList.push({name: imgs[i], url: window.location.host + '/gt/Upload/' + imgs[i]}); //分割后的字符输出
                 }
             },
 
@@ -696,7 +695,10 @@
                 let imgs = new Array();
                 imgs = this.detailForm.accessoryKey.split(",");
                 for (var i = 0; i < imgs.length; i++) {
-                    this.fileList.push({name: imgs[i], url: 'http://' + window.location.host + '/Upload/' + imgs[i]}); //分割后的字符输出
+                    this.fileList.push({
+                        name: imgs[i],
+                        url: 'http://' + window.location.host + '/gt/Upload/' + imgs[i]
+                    }); //分割后的字符输出
                 }
             },
 
