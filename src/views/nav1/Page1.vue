@@ -87,13 +87,13 @@
         </div>
 
         <!--新增界面-->
-        <el-dialog title="新增告警知识" v-model="addFormVisible" :close-on-click-modal="false" size="small">
-            <el-form ref="addForm" :model="addForm" label-width="100px" :rules="addFormRules">
-                <el-form-item label="名称" prop="knowledgeTitle" style="width: 450px;">
+        <el-dialog title="新增告警知识" v-model="addFormVisible" :close-on-click-modal="false" size="tiny">
+            <el-form ref="addForm" :model="addForm" label-width="20%" :rules="addFormRules">
+                <el-form-item label="名称" prop="knowledgeTitle">
                     <el-input v-model="addForm.knowledgeTitle" placeholder="请输入名称" auto-complete="off"></el-input>
                 </el-form-item>
                 <el-form-item label="设备类型" prop="equipmentCategory">
-                    <el-select v-model="addForm.equipmentCategory" placeholder="请选择设备类" style="width: 350px;">
+                    <el-select v-model="addForm.equipmentCategory" placeholder="请选择设备类">
                         <el-option
                                 v-for="item in categorySource"
                                 :key="item.value"
@@ -102,7 +102,7 @@
                         </el-option>
                     </el-select>
                 </el-form-item>
-                <el-form-item label="问题现象" prop="problem" style="width: 450px;">
+                <el-form-item label="问题现象" prop="problem">
                     <el-input
                             type="textarea"
                             :autosize="{ minRows: 2, maxRows: 10}"
@@ -110,7 +110,7 @@
                             v-model="addForm.problem">
                     </el-input>
                 </el-form-item>
-                <el-form-item label="解决方式" prop="solution" style="width: 450px;">
+                <el-form-item label="解决方式" prop="solution">
                     <el-input
                             type="textarea"
                             :autosize="{ minRows: 2, maxRows: 10}"
@@ -118,11 +118,11 @@
                             v-model="addForm.solution">
                     </el-input>
                 </el-form-item>
-                <el-form-item label="关键词" prop="keyWord" style="width: 450px;">
+                <el-form-item label="关键词" prop="keyWord">
                     <el-input v-model="addForm.keyWord" placeholder="请输入关键词" auto-complete="off"></el-input>
                     (多个关键字之间用“,”分隔)
                 </el-form-item>
-                <el-form-item label="备注" prop="remark" style="width: 450px;">
+                <el-form-item label="备注" prop="remark">
                     <el-input
                             type="textarea"
                             :autosize="{ minRows: 2, maxRows: 10}"
@@ -157,13 +157,13 @@
         </el-dialog>
 
         <!--编辑界面-->
-        <el-dialog title="编辑告警知识" v-model="editFormVisible" :close-on-click-modal="false">
-            <el-form :model="editForm" label-width="100px" :rules="editFormRules" ref="editForm">
-                <el-form-item label="名称" prop="knowledgeTitle" style="width: 450px;">
+        <el-dialog title="编辑告警知识" v-model="editFormVisible" :close-on-click-modal="false" size="tiny">
+            <el-form :model="editForm" label-width="20%" :rules="editFormRules" ref="editForm">
+                <el-form-item label="名称" prop="knowledgeTitle">
                     <el-input v-model="editForm.knowledgeTitle" placeholder="请输入名称" auto-complete="off"></el-input>
                 </el-form-item>
                 <el-form-item label="设备类型" prop="equipmentCategory">
-                    <el-select v-model="editForm.equipmentCategory" placeholder="请选择设备类" style="width: 350px;">
+                    <el-select v-model="editForm.equipmentCategory" placeholder="请选择设备类">
                         <el-option
                                 v-for="item in categorySource"
                                 :key="item.value"
@@ -172,7 +172,7 @@
                         </el-option>
                     </el-select>
                 </el-form-item>
-                <el-form-item label="问题现象" prop="problem" style="width: 450px;">
+                <el-form-item label="问题现象" prop="problem">
                     <el-input
                             type="textarea"
                             :autosize="{ minRows: 2, maxRows: 10}"
@@ -180,7 +180,7 @@
                             v-model="editForm.problem">
                     </el-input>
                 </el-form-item>
-                <el-form-item label="解决方式" prop="solution" style="width: 450px;">
+                <el-form-item label="解决方式" prop="solution">
                     <el-input
                             type="textarea"
                             :autosize="{ minRows: 2, maxRows: 10}"
@@ -188,13 +188,13 @@
                             v-model="editForm.solution">
                     </el-input>
                 </el-form-item>
-                <el-form-item label="关键词" prop="keyWord" style="width: 450px;">
+                <el-form-item label="关键词" prop="keyWord">
                     <el-input v-model="editForm.keyWord" placeholder="请输入关键词" auto-complete="off"></el-input>
                     (多个关键字之间用“,”分隔)
                 </el-form-item>
                 <el-checkbox v-model="editForm.isVerified" style="margin-left: 100px;margin-bottom: 20px;">是否验证
                 </el-checkbox>
-                <el-form-item label="备注" prop="remark" style="width: 450px;">
+                <el-form-item label="备注" prop="remark">
                     <el-input
                             type="textarea"
                             :autosize="{ minRows: 2, maxRows: 10}"
@@ -229,14 +229,13 @@
         </el-dialog>
 
         <!--详情界面-->
-        <el-dialog title="告警知识详情" v-model="detailFormVisible" :close-on-click-modal="false">
-            <el-form :model="detailForm" label-width="100px">
-                <el-form-item label="名称" style="width: 450px;">
+        <el-dialog title="告警知识详情" v-model="detailFormVisible" :close-on-click-modal="false" size="tiny">
+            <el-form :model="detailForm" label-width="20%">
+                <el-form-item label="名称">
                     <el-input :readonly="true" v-model="detailForm.knowledgeTitle" auto-complete="off"></el-input>
                 </el-form-item>
                 <el-form-item label="设备类型">
-                    <el-select :disabled="true" v-model="detailForm.equipmentCategory" placeholder="请选择设备类"
-                               style="width: 350px;">
+                    <el-select :disabled="true" v-model="detailForm.equipmentCategory" placeholder="请选择设备类">
                         <el-option
                                 v-for="item in categorySource"
                                 :key="item.value"
@@ -245,7 +244,7 @@
                         </el-option>
                     </el-select>
                 </el-form-item>
-                <el-form-item label="问题现象" style="width: 450px;">
+                <el-form-item label="问题现象">
                     <el-input
                             :readonly="true"
                             type="textarea"
@@ -253,7 +252,7 @@
                             v-model="detailForm.problem">
                     </el-input>
                 </el-form-item>
-                <el-form-item label="解决方式" style="width: 450px;">
+                <el-form-item label="解决方式">
                     <el-input
                             :readonly="true"
                             type="textarea"
@@ -261,13 +260,13 @@
                             v-model="detailForm.solution">
                     </el-input>
                 </el-form-item>
-                <el-form-item label="关键词" style="width: 450px;">
+                <el-form-item label="关键词">
                     <el-input :readonly="true" v-model="detailForm.keyWord" auto-complete="off"></el-input>
                 </el-form-item>
                 <el-checkbox :disabled="true" v-model="detailForm.isVerified"
                              style="margin-left: 100px;margin-bottom: 20px;">是否验证
                 </el-checkbox>
-                <el-form-item label="备注" prop="remark" style="width: 450px;">
+                <el-form-item label="备注" prop="remark">
                     <el-input
                             :readonly="true"
                             type="textarea"
@@ -276,7 +275,7 @@
                             v-model="detailForm.remark">
                     </el-input>
                 </el-form-item>
-                <el-form-item label="附件" style="width: 450px;">
+                <el-form-item label="附件">
                     <div v-for="item in fileList">
                         <a v-bind:href="item.url" target="_blank"><img v-bind:src="item.url" alt="附件"
                                                                        style="width: 80px;height: 60px"></a>
