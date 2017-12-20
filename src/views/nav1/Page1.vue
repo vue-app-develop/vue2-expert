@@ -484,8 +484,8 @@
                 let _this = this;
                 _this.knowledge = [];
 
-                console.log('_this.filters.equipmentCategory' + _this.filters.equipmentCategory);
-                console.log('_this.filters.keyWord' + _this.filters.keyWord);
+                // console.log('_this.filters.equipmentCategory' + _this.filters.equipmentCategory);
+                // console.log('_this.filters.keyWord' + _this.filters.keyWord);
 
                 let para = {
                     pageNo: _this.listQuery.curPage,
@@ -552,7 +552,7 @@
                                 _this.knowledge.push(item);
                             }
                         }
-                        console.log('_this.knowledge: ' + JSON.stringify(_this.knowledge));
+                        // console.log('_this.knowledge: ' + JSON.stringify(_this.knowledge));
                     }
                 });
                 setTimeout(() => {
@@ -775,8 +775,8 @@
             },
             handleRemove(file, fileList) {
 
-                console.log('handleRemove file: ' + file.name);
-                console.log('handleRemove fileList: ' + fileList.length);
+                // console.log('handleRemove file: ' + file.name);
+                // console.log('handleRemove fileList: ' + fileList.length);
                 this.editForm.accessoryKey = '';
                 for (var i = 0; i < fileList.length; i++) {
                     if (this.editForm.accessoryKey === '') {
@@ -794,22 +794,21 @@
                 }
             },
             handlePreview(file) {
-                console.log('handlePreview file: ' + file);
+                // console.log('handlePreview file: ' + file);
             },
             handleExceed(files, fileList) {
                 this.$message.warning(`当前限制选择 3 个文件，本次选择了 ${files.length} 个文件，共选择了 ${files.length + fileList.length} 个文件`);
             },
             handleSuccess(response, file, fileList) {
-                console.log('handleSuccess response: ' + response);
-                console.log('handleSuccess file: ' + file);
-                console.log('handleSuccess fileList: ' + fileList);
+                // console.log('handleSuccess response: ' + response);
+                // console.log('handleSuccess file: ' + file);
+                // console.log('handleSuccess fileList: ' + fileList);
                 if (this.addForm.accessoryKey) {
                     this.addForm.accessoryKey += ',' + response;
                 }
                 else {
                     this.addForm.accessoryKey = response;
                 }
-                ////////////////////
                 if (this.editForm.accessoryKey) {
                     this.editForm.accessoryKey += ',' + response;
                 }
@@ -832,10 +831,10 @@
                 createUser: '',
                 accessoryKey: ''
             };
-            let eventName = this.getQueryString('eventName');
+            let eventName = encodeURIComponent(this.getQueryString('eventName'));
             if (eventName) {
                 this.addForm.knowledgeTitle = eventName;
-                this.addForm.equipmentCategory = parseInt(this.getQueryString('equipmentCategory').trim());
+                this.addForm.equipmentCategory = encodeURIComponent(parseInt(this.getQueryString('equipmentCategory').trim()));
                 this.handleAdd();
             }
         }
