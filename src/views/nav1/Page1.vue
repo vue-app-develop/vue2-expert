@@ -275,7 +275,7 @@
                             v-model="detailForm.remark">
                     </el-input>
                 </el-form-item>
-                <el-form-item label="附件">
+                <el-form-item label="附件" v-if="fileList.length>0">
                     <div v-for="item in fileList">
                         <a v-bind:href="item.url" target="_blank"><img v-bind:src="item.url" alt="附件"
                                                                        style="width: 80px;height: 60px"></a>
@@ -835,7 +835,7 @@
                 createUser: '',
                 accessoryKey: ''
             };
-            let eventName = decodeURIComponent(this.getQueryString('eventName'));
+            let eventName = decodeURIComponent(this.getQueryString('eventName').trim());
             if (eventName) {
                 this.addForm.knowledgeTitle = eventName;
                 this.addForm.equipmentCategory = decodeURIComponent(parseInt(this.getQueryString('equipmentCategory').trim()));
