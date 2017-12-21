@@ -633,8 +633,10 @@
                 this.editForm = Object.assign({}, row);
                 let imgs = new Array();
                 imgs = this.editForm.accessoryKey.split(",");
-                for (var i = 0; i < imgs.length; i++) {
-                    this.fileList.push({name: imgs[i], url: window.location.host + '/gt/Upload/' + imgs[i]}); //分割后的字符输出
+                if(imgs.length>0) {
+                    for (var i = 0; i < imgs.length; i++) {
+                        this.fileList.push({name: imgs[i], url: window.location.host + '/gt/Upload/' + imgs[i]}); //分割后的字符输出
+                    }
                 }
             },
 
@@ -693,11 +695,13 @@
                 this.detailForm = Object.assign({}, row);
                 let imgs = new Array();
                 imgs = this.detailForm.accessoryKey.split(",");
-                for (var i = 0; i < imgs.length; i++) {
-                    this.fileList.push({
-                        name: imgs[i],
-                        url: 'http://' + window.location.host + '/gt/Upload/' + imgs[i]
-                    }); //分割后的字符输出
+                if(imgs.length>0) {
+                    for (var i = 0; i < imgs.length; i++) {
+                        this.fileList.push({
+                            name: imgs[i],
+                            url: 'http://' + window.location.host + '/gt/Upload/' + imgs[i]
+                        }); //分割后的字符输出
+                    }
                 }
             },
 
@@ -831,10 +835,10 @@
                 createUser: '',
                 accessoryKey: ''
             };
-            let eventName = encodeURIComponent(this.getQueryString('eventName'));
+            let eventName = decodeURIComponent(this.getQueryString('eventName'));
             if (eventName) {
                 this.addForm.knowledgeTitle = eventName;
-                this.addForm.equipmentCategory = encodeURIComponent(parseInt(this.getQueryString('equipmentCategory').trim()));
+                this.addForm.equipmentCategory = decodeURIComponent(parseInt(this.getQueryString('equipmentCategory').trim()));
                 this.handleAdd();
             }
         }
