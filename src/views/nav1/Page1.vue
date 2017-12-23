@@ -565,6 +565,7 @@
                 this.addFormVisible = true;
                 this.dynamicTags.push(new Date().toLocaleString());
                 this.fileList = [];
+                this.addForm.accessoryKey = '';
                 // this.addForm = {
                 //     knowledgeTitle: '',
                 //     keyWord: '',
@@ -633,7 +634,7 @@
                 this.editForm = Object.assign({}, row);
                 let imgs = new Array();
                 imgs = this.editForm.accessoryKey.split(",");
-                if(imgs.length>0) {
+                if(imgs.length>0 && imgs[0].trim().length>0) {
                     for (var i = 0; i < imgs.length; i++) {
                         this.fileList.push({name: imgs[i], url: window.location.host + '/gt/Upload/' + imgs[i]}); //分割后的字符输出
                     }
@@ -695,7 +696,7 @@
                 this.detailForm = Object.assign({}, row);
                 let imgs = new Array();
                 imgs = this.detailForm.accessoryKey.split(",");
-                if(imgs.length>0) {
+                if(imgs.length>0 && imgs[0].trim().length>0) {
                     for (var i = 0; i < imgs.length; i++) {
                         this.fileList.push({
                             name: imgs[i],
