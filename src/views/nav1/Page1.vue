@@ -56,7 +56,7 @@
                     </el-table-column>
                     <el-table-column prop="equipmentCategory" label="所属设备类">
                         <template slot-scope="scope" v-if="scope.row.equipmentCategory">
-                            <el-tag size="medium">{{ scope.row.equipmentCategory }}</el-tag>
+                            <el-tag size="medium">{{ scope.row.equipmentCategoryName }}</el-tag>
                         </template>
                     </el-table-column>
                     <el-table-column prop="cTime" label="创建时间">
@@ -521,6 +521,7 @@
                                     problem: '',
                                     solution: '',
                                     equipmentCategory: '',
+                                    equipmentCategoryName: '',
                                     baseTypeId: '',
                                     isVerified: '',
                                     VerifyTime: '',
@@ -534,6 +535,7 @@
                                 item.problem = know.Problem;
                                 item.solution = know.Solution;
                                 item.equipmentCategory = know.EquipmentCategory;
+                                item.equipmentCategoryName = know.EquipmentCategoryName;
                                 item.remark = know.Remark;
                                 item.accessoryKey = know.AccessoryKey;
                                 if (know.IsVerified == '1') {
