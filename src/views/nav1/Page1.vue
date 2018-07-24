@@ -275,8 +275,9 @@
                 </el-form-item>
                 <el-form-item label="附件" v-if="fileList.length>0">
                     <div v-for="item in fileList">
-                        <a v-bind:href="item.url" target="_blank"><img v-bind:src="item.url" alt="附件"
-                                                                       style="width: 80px;height: 60px"></a>
+                        <a v-bind:href="item.url" target="_blank">
+                            <img v-bind:src="item.url" v-if="item.isImg" alt="附件" style="width: 80px;height: 60px">
+                        </a>
                     </div>
                 </el-form-item>
             </el-form>
@@ -417,10 +418,16 @@
         methods: {
             //获取浏览器参数
             getQueryString(name) {
+                if (!name) {
+                    return;
+                }
                 var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
                 var r = window.location.search.substr(1).match(reg);
                 if (r != null) return (r[2]);
                 return null;
+            },
+            check_is_img: function (url) {
+                return (url.match(/\.(jpeg|jpg|gif|png)$/) != null)
             },
             //操作分页
             handleSizeChange(val) {
@@ -588,7 +595,9 @@
                             //NProgress.start();
                             let para = Object.assign({}, this.addForm);
                             //alert('this.addForm.accessoryKey' + this.addForm.accessoryKey);
-                            para.createUser = localStorage.getItem('loginUser').name;
+                            if (localStorage.getItem('loginUser')) {
+                                para.createUser = localStorage.getItem('loginUser').name;
+                            }
                             //alert('this.fileList.length' + this.fileList.length);
                             //alert(para.accessoryKey);
                             //alert(para.accessoryKey);
@@ -634,7 +643,7 @@
                 this.editForm = Object.assign({}, row);
                 let imgs = new Array();
                 imgs = this.editForm.accessoryKey.split(",");
-                if(imgs.length>0 && imgs[0].trim().length>0) {
+                if (imgs.length > 0 && imgs[0].trim().length > 0) {
                     for (var i = 0; i < imgs.length; i++) {
                         this.fileList.push({name: imgs[i], url: window.location.host + '/gt/Upload/' + imgs[i]}); //分割后的字符输出
                     }
@@ -696,11 +705,13 @@
                 this.detailForm = Object.assign({}, row);
                 let imgs = new Array();
                 imgs = this.detailForm.accessoryKey.split(",");
-                if(imgs.length>0 && imgs[0].trim().length>0) {
+                if (imgs.length > 0 && imgs[0].trim().length > 0) {
                     for (var i = 0; i < imgs.length; i++) {
+                        let imgUrl = 'http://' + window.location.host + '/gt/Upload/' + imgs[i];
                         this.fileList.push({
                             name: imgs[i],
-                            url: 'http://' + window.location.host + '/gt/Upload/' + imgs[i]
+                            url: imgUrl,
+                            isImg: this.isImg(imgUrl)
                         }); //分割后的字符输出
                     }
                 }
