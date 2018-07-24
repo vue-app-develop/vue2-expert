@@ -573,6 +573,7 @@
                 this.dynamicTags.push(new Date().toLocaleString());
                 this.fileList = [];
                 this.addForm.accessoryKey = '';
+                this.addForm.equipmentCategory = this.categorySource[0].value;
                 // this.addForm = {
                 //     knowledgeTitle: '',
                 //     keyWord: '',
@@ -711,7 +712,7 @@
                         this.fileList.push({
                             name: imgs[i],
                             url: imgUrl,
-                            isImg: this.isImg(imgUrl)
+                            isImg: this.check_is_img(imgUrl)
                         }); //分割后的字符输出
                     }
                 }
