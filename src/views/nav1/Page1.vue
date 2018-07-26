@@ -279,7 +279,7 @@
                             <img v-bind:src="item.url" alt="附件" style="width: 80px;height: 60px">
                         </a>
                         <a v-bind:href="item.url" target="_blank" v-if="!item.isImg">
-                            附件 {{ item.name }}}
+                            附件 {{ item.name }}
                         </a>
                     </div>
                 </el-form-item>
