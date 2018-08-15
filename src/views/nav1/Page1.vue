@@ -55,7 +55,7 @@
                     <el-table-column prop="solution" label="解决方式" width="300" :show-overflow-tooltip="true">
                     </el-table-column>
                     <el-table-column prop="equipmentCategory" label="所属设备类">
-                        <template slot-scope="scope" v-if="scope.row.equipmentCategory">
+                        <template slot-scope="scope">
                             <el-tag size="medium">{{ scope.row.equipmentCategoryName }}</el-tag>
                         </template>
                     </el-table-column>
